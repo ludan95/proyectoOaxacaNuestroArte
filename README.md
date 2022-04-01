@@ -7,4 +7,4 @@
 - Carrito de compra
 - Perfil del cliente
 
-![Pantalla Principal](https://drive.google.com/file/d/1O_FzEAZUzPJF4hdfAa2hgDoQ1cwzmpZQ/view?usp=sharing)
+![Pantalla Principal](https://scontent.fmid1-4.fna.fbcdn.net/v/t39.30808-6/277724719_5399228270110401_6168500775695269760_n.jpg?_nc_cat=101&ccb=1-5&_nc_sid=0debeb&_nc_ohc=hDO1Z-ZZxysAX-XzU5r&tn=1saBvdSgNxOAoDAX&_nc_ht=scontent.fmid1-4.fna&oh=00_AT85un9g_v-3sihSIrt10XpbMFFWb1RzpycMECaPb-nvkg&oe=624B59DA)
