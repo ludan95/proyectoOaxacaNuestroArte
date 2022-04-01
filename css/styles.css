@@ -34,10 +34,15 @@ button{
     width: 250px;
 }
 
-h2,h4,h5,hr,ul{
+h1,h2,h4,h5,hr,ul{
     color: beige;
 }
 
 #apartado1{
     border:0.1px solid rgb(121, 121, 121);
  }
+
+ #titulo_domicilio{
+     color:rgb(255, 255, 255);
+ }
+
