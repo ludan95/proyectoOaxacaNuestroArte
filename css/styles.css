@@ -24,3 +24,20 @@ body{
     text-align: center;
     margin-top: 40px;
 }
+
+
+button{
+    background-color: #a2238e;
+    text-align: center;
+    border-radius: 8px;
+    color: beige;  
+    width: 250px;
+}
+
+h2,h4,h5,hr,ul{
+    color: beige;
+}
+
+#apartado1{
+    border:0.1px solid rgb(121, 121, 121);
+ }
