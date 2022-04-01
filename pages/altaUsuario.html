@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>proyectoOaxacaNuestroArte</title>
+        <!--! Fuente--> 
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+        <!--! Boostrap  Añadimos el link al archivo-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+        <!--! Archivo css local--> 
+        <link rel="stylesheet" href="../css/styles.css">
+        <!--! Scrollreveal--> 
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+
+    </head>
+    <body>
+        
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarScroll">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll m-xl-auto" style="--bs-scroll-height: 100px;">
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Link</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Link
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
+                    <li><a class="dropdown-item" href="#">Action</a></li>
+                    <li><a class="dropdown-item" href="#">Another action</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link ">Login</a>
+                </li>
+                </ul>
+                <form class="d-flex">
+                <input class="form-control me-2" type="search" placeholder="¿Qué te gustaria buscar?" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+                </form>
+            </div>
+            </div>
+        </nav>
+
+        
+        <!--! Inicio del formulario--> 
+        <header id="headerUno" >
+            <div class="container-fluid">
+                <div class="row color-texto-blanco">
+                    <div class="col-md-7">
+                      <div class="header-content-left card-header-pills">
+                          <img src="../img/imgPageAltaUsuario/vestidoIstmeño.png" alt="" width="75%">
+                      </div>
+                    </div>
+  
+                    <div class="col-md-5 mt-1 m-lg-auto ">
+                        <div class="header-content-right">
+                            <form class="well form-horizontal " action=" " method="post"  id="contact_form ">
+                                <fieldset>
+                                <br>
+                                <!-- Form Name -->
+                                <h4 class="label_Formulario">Agregar Usuario</h4>
+                                <br>
+                                <!-- Text input-->
+                                
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Nombre(s)</label>  
+                                <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input  name="first_name" placeholder="Nombre(s)" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario" >Apellido(s)</label> 
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                <input name="last_name" placeholder="Apellido(s)" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                    <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Correo Electronico</label>  
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                <input name="email" placeholder="Correo Electronico" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                
+                                <!-- Text input-->
+                                    
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Telefono</label>  
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                <input name="phone" placeholder="+52" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                    
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Dirección</label>  
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="address" placeholder="Dirección" class="form-control" type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Ciudad</label>  
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="city" placeholder="Ciudad" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Select Basic -->
+                                
+                                <div class="form-group mt-3"> 
+                                <label class="col-md-4 control-label label_Formulario">Estado</label>
+                                    <div class="col-md-10 selectContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                    <select name="state" class="form-control selectpicker" >
+                                    <option value=" " >----Selecciona tu estado----</option>
+                                    <option>Opcion1</option>
+                                    <option>Opcion2</option>
+                                    <option>Opcion3</option>
+                                    </select>
+                                </div>
+                                </div>
+                                </div>
+                                
+                                <!-- Text input-->
+                                
+                                <div class="form-group mt-3">
+                                <label class="col-md-4 control-label label_Formulario">Codigo Postal</label>  
+                                    <div class="col-md-10 inputGroupContainer">
+                                    <div class="input-group">
+                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                <input name="zip" placeholder="Codigo Postal" class="form-control"  type="text">
+                                    </div>
+                                </div>
+                                </div>
+                            
+                                <!-- Success message 
+                                <div class="alert alert-success" role="alert" id="success_message">Success <i class="glyphicon glyphicon-thumbs-up"></i> Thanks for contacting us, we will get back to you shortly.</div>
+                                -->
+                                <br>
+                                <!-- Afregar checkbox-->
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
+                                    <label class="form-check-label" for="flexCheckChecked">
+                                    Aceptar Terminos y condiciones
+                                    </label>
+                                </div>
+
+                                <!-- Button -->
+                                <div class="form-group">
+                                <label class="col-md-4 control-label label_Formulario"></label>
+                                <div class="col-md-4">
+                                    <button type="submit" class="btn  btn-outline-secondary" >Agregar <span class="glyphicon glyphicon-send"></span></button>
+                                </div>
+                                </div>
+                                
+                                </fieldset>
+                            </form>      
+                        </div>
+                    </div>
+                </div>
+  
+            </div>
+          </header>
+        <!--! Fin del formulario-->  
+
+
+        <!--! Boostrap  Añadimos los scrips JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        <script src="js/archivo.js"></script>
+    </body>
+</html>
