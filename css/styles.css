@@ -46,3 +46,16 @@ h1,h2,h4,h5,hr,ul{
      color:rgb(255, 255, 255);
  }
 
+.catalogo{
+    font-family: 'Roboto', sans-serif;
+    background:#f0ecef;
+}
+.tituloCatalogo{
+    font-family: 'Roboto', sans-serif;
+    background:#362b6f;
+    box-sizing: border-box;
+    display: block;
+    float: none;
+    position: static;
+    padding: 30px 0 10px 0;    
+}
