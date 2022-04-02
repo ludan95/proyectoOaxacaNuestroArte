@@ -62,12 +62,6 @@ h1,h2,h4,h5,hr,ul{
 .subtitulo{
     color: rgb(31, 31, 30);
 }
-.botonComprar{  
-    width: 180px;
-    height: 40px;
-}
-.botonFavorito{  
-    background-color: #f5eff4;
-    width: 180px;
-    color: #5d47a0;
+p{
+    text-align: center;
 }
