@@ -34,7 +34,7 @@ button{
     width: 250px;
 }
 
-h1,h2,h4,h5,hr,ul{
+h1,h2,h4,h5,h6,hr,ul{
     color: beige;
 }
 
@@ -65,3 +65,4 @@ h1,h2,h4,h5,hr,ul{
 p{
     text-align: center;
 }
+
