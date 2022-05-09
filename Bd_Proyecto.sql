@@ -26,8 +26,8 @@ CREATE TABLE tarjeta(
     entidad_bancaria varchar(50) not null,
     tipo_tarjeta varchar(7) not null
 );
---? insertar un valor 
---? INSERT INTO  tarjeta VALUES(null,'5522448899776655','luis daniel','02','24','888','Banamex','debito')
+-- ? insertar un valor 
+-- ? INSERT INTO  tarjeta VALUES(null,'5522448899776655','luis daniel','02','24','888','Banamex','debito')
 
 
 CREATE TABLE cliente(
@@ -35,21 +35,19 @@ CREATE TABLE cliente(
     nombre_cliente varchar(50) not null,
     apellidos_cliente varchar(50) not null,
     correo_electronico  varchar(50) not null,
-    telefono  varchar(10) not null,
     img  varchar(50) not null,
     contrasenia_usuario varchar(50) not null,
     id_direccion  integer not null,
-    id_tarjeta integer not null,
-    FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion),
-    FOREIGN KEY (id_tarjeta) REFERENCES tarjeta(id_tarjeta)
+    FOREIGN KEY (id_direccion) REFERENCES direccion(id_direccion)
 );
+-- * insertar un valor
+-- * INSERT INTO  cliente VALUES(null, 'luis daniel','solano vargaz','mludan95@gmai.com','sin/Img',MD5('luisdaniel'),1);
 
 CREATE TABLE artesano(
     id_artesano  integer PRIMARY KEY AUTO_INCREMENT not null,
     nombre_artesano varchar(50) not null,
     apellidos_artesano varchar(50) not null,
     correo_electronico varchar(50) not null,
-    Telefono varchar(50) not null,
     region varchar(50) not null,
     img varchar(50) not null,
     contrasenia_artesano varchar(50) not null,
@@ -86,7 +84,9 @@ CREATE TABLE detalle_artesania(
 CREATE TABLE venta(
     id_venta integer PRIMARY KEY AUTO_INCREMENT not null,
     id_cliente_usuario integer not null,
+    id_tarjeta integer not null,
     fecha date not null,
+    FOREIGN KEY (id_tarjeta) REFERENCES tarjeta(id_tarjeta),
     FOREIGN KEY (id_cliente_usuario) REFERENCES cliente(id_cliente_usuario)
 );
 
@@ -98,6 +98,7 @@ CREATE TABLE detalle_venta(
     FOREIGN KEY (id_venta) REFERENCES venta(id_venta),
     FOREIGN KEY (id_artesania) REFERENCES artesania(id_artesania)
 );
+
 
 
 

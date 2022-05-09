@@ -1,19 +1,17 @@
 <?php
 
-    function Conexion(){
-        $host= 'localhost';
-        $user='prueba_ecommerce';
-        $pass= 'prueba';
-        $db='ecommerceartesanias';
+    $host= 'localhost';
+    $user='prueba_ecommerce';
+    $pass= 'prueba';
+    $db='ecommerceartesanias';
 
-        $conexion= mysqli_connect($host,$user,$pass,$db);
-        if($conexion){
-            echo "Base de Datos Conectada";   
-        }else{
-            echo 'No se pudo establecer la coneccion';
+        $conexion= new mysqli($host,$user,$pass,$db);
+        mysqli_query( $conexion, 'SET NAMES utf8');
+        //Si tenemos un posible error en la conexión lo mostramos
+        if (mysqli_connect_errno())
+        {
+            printf("Falló conexiónala base de datos: %s\n",
+                mysqli_connect_error());
+            exit();
         }
-
-        return $conexion;
-        }
-
 ?>

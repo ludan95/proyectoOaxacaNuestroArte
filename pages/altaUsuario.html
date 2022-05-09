@@ -68,20 +68,22 @@
   
                     <div class="col-md-5 mt-1 m-lg-auto ">
                         <div class="header-content-right">
-                            <form class="well form-horizontal " action=" " method="post"  id="contact_form ">
+                            <form class="well form-horizontal " action=" " method="post"  id="contact_form " enctype="multipart/form-data">
                                 <fieldset>
                                 <br>
                                 <!-- Form Name -->
-                                <h4 class="label_Formulario">Agregar Usuario</h4>
+                                <h4 class="label_Formulario">Registrarse</h4>
                                 <br>
                                 <!-- Text input-->
+
+                                <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple />
                                 
                                 <div class="form-group mt-3">
                                 <label class="col-md-4 control-label label_Formulario">Nombre(s)</label>  
                                 <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input  name="first_name" placeholder="Nombre(s)" class="form-control"  type="text">
+                                <input  name="first_name" placeholder="Nombre(s)" class="form-control"  type="name">
                                     </div>
                                 </div>
                                 </div>
@@ -93,7 +95,7 @@
                                     <div class="col-md-10 inputGroupContainer">
                                     <div class="input-group">
                                 <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" placeholder="Apellido(s)" class="form-control"  type="text">
+                                <input name="last_name" placeholder="Apellido(s)" class="form-control"  type="last_name">
                                     </div>
                                 </div>
                                 </div>
@@ -104,10 +106,30 @@
                                     <div class="col-md-10 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="Correo Electronico" class="form-control"  type="text">
+                                <input name="email" placeholder="Correo Electronico" class="form-control"  type="email">
                                     </div>
                                 </div>
                                 </div>
+
+                                <div class="form-group mt-3">
+                                    <label class="col-md-4 control-label label_Formulario">Contraseña</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                    <input name="contrasenia" placeholder="Ingresar Contraseña" class="form-control"  type="password">
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label label_Formulario">Repetir Contraseña</label>  
+                                            <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        <input name="repetirContrasenia" placeholder="Repetir Contraseña" class="form-control"  type="text">
+                                            </div>
+                                        </div>
+                                        </div>    
                                 
                                 
                                 <!-- Text input-->
@@ -122,55 +144,73 @@
                                 </div>
                                 </div>
                                 
+                                <!-- Select Basic -->
+                                
+
+                                <div class="form-group mt-3"> 
+                                    <label class="col-md-4 control-label label_Formulario">Estado</label><br>
+                                        <div class="col-md-10 selectContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                            <select id="estado" name="estado" placeholder="Municipio" class="form-control" type="text"></></select>
+                                        </div>
+                                    </div>
+                                </div>
+                                
                                 <!-- Text input-->
                                     
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Dirección</label>  
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="address" placeholder="Dirección" class="form-control" type="text">
+                                    <label class="col-md-4 control-label label_Formulario">Municipio</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                            <select id="municipio" name="municipio" placeholder="Municipio" class="form-control" type="text"></select>
+                                        </div>
                                     </div>
-                                </div>
-                                </div>
-                                
+                                    </div>
+                                    
+                                    <!-- Text input-->
+                                    
+                                    <div class="form-group mt-3">
+                                    <label class="col-md-4 control-label label_Formulario">Localidad</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                        <div class="input-group">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="city" placeholder="Localidad" class="form-control"  type="text">
+                                        </div>
+                                    </div>
+                                    </div>
+
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label label_Formulario">Calle</label>  
+                                            <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                        <input name="address" placeholder="Calle" class="form-control" type="text">
+                                            </div>
+                                        </div>
+                                        </div>
+                                        
+                                        <!-- Text input-->
+                                        
+                                        <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label label_Formulario">N&#250;mero</label>  
+                                            <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                        <input name="city" placeholder="N&#250;mero" class="form-control"  type="text">
+                                            </div>
+                                        </div>
+                                        </div>
+                                                                    
                                 <!-- Text input-->
                                 
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Ciudad</label>  
+                                <label class="col-md-4 control-label label_Formulario">C&#243;digo postal</label>  
                                     <div class="col-md-10 inputGroupContainer">
                                     <div class="input-group">
                                         <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="city" placeholder="Ciudad" class="form-control"  type="text">
-                                    </div>
-                                </div>
-                                </div>
-                                
-                                <!-- Select Basic -->
-                                
-                                <div class="form-group mt-3"> 
-                                <label class="col-md-4 control-label label_Formulario">Estado</label>
-                                    <div class="col-md-10 selectContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                                    <select name="state" class="form-control selectpicker" >
-                                    <option value=" " >----Selecciona tu estado----</option>
-                                    <option>Opcion1</option>
-                                    <option>Opcion2</option>
-                                    <option>Opcion3</option>
-                                    </select>
-                                </div>
-                                </div>
-                                </div>
-                                
-                                <!-- Text input-->
-                                
-                                <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Codigo Postal</label>  
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="zip" placeholder="Codigo Postal" class="form-control"  type="text">
+                                <input name="zip" placeholder="C&#243;digo postal" class="form-control"  type="text">
                                     </div>
                                 </div>
                                 </div>
@@ -194,8 +234,9 @@
                                     <button type="submit" class="btn  btn-outline-secondary" >Agregar <span class="glyphicon glyphicon-send"></span></button>
                                 </div>
                                 </div>
+                            
                                 
-                                </fieldset>
+
                             </form>      
                         </div>
                     </div>
@@ -211,5 +252,14 @@
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
         <script src="js/archivo.js"></script>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="../js/municipios.js"></script>
+        <script type="text/javascript" src="../js/select_estados.js"></script>
+        <script type="text/javascript">
+            $(document).ready(function(){
+              $('select').material_select();
+            });
+        </script>
+
     </body>
 </html>
