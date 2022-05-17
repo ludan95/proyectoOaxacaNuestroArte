@@ -24,14 +24,5 @@
             $imagen= "C:/xampp/htdocs/Programacion_Web/proyectoOaxacaNuestroArte/img/imgPerfiles_Usuarios/".$nombre;
       }
     }
-/*
-//  Prueba conexion
-<?php
-
-require 'conexion.php';
-$conexion= Conexion();
-? >
-*/
-
 ?>
 
