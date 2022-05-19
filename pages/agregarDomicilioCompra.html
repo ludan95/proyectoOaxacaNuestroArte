@@ -53,82 +53,60 @@
                         </div>
                         </div>
 
-                    <!-- Nombre del comprador-->
+                    <!-- Municipio-->
                     <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Nombre y Apellido</label>  
+                        <label class="col-md-4 control-label label_Formulario">Municipio</label>  
                         <div class="col-md-10 inputGroupContainer">
-                        <div class="input-group">
-                        <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                        <input  name="first_name" class="form-control"  type="text">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Municipio" class="form-control"  type="text">
                             </div>
                         </div>
-                        </div>
+                    </div
 
-                    <!-- codigo postal-->
+                    <!-- Localidad-->
                     <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Código postal</label>  
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="city" class="form-control"  type="text">
-                                </div>
+                        <label class="col-md-4 control-label label_Formulario">Localidad</label>  
+                        <div class="col-md-10 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Localidad" class="form-control"  type="text">
                             </div>
-                    </div>
-
+                        </div>
+                    </div
 
                        <!-- Calle y numero -->
                        <div class="form-group mt-3">
-                            <label class="col-md-4 control-label label_Formulario">Calle y Número </label>  
-                                <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="city" class="form-control"  type="text">
-                                    </div>
-                                </div>
-                        </div>
-
-                     <!-- Estado/Provincia/Región-->
-                     <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Estado/Provincia/Región</label>  
+                            <label class="col-md-4 control-label label_Formulario">Calle y numero</label>  
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
                                     <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="city" class="form-control"  type="text">
+                                        <input name="zip" placeholder="Calle y numero" class="form-control"  type="text">
                                 </div>
                             </div>
-                    </div>
+                        </div
 
-                     <!-- Ciudad-->
+                     <!-- Apartado del codigo postal-->
                      <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Ciudad</label>  
-                            <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="city" class="form-control"  type="text">
-                                </div>
+                        <label class="col-md-4 control-label label_Formulario">Codigo Postal</label>  
+                        <div class="col-md-10 inputGroupContainer">
+                            <div class="input-group">
+                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Codigo Postal" class="form-control"  type="text">
                             </div>
+                        </div>
                     </div>
 
-                        <!-- Colonia-->
-                        <div class="form-group mt-3">
-                            <label class="col-md-4 control-label label_Formulario">Colonia</label>  
-                                <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="city" class="form-control"  type="text">
-                                    </div>
-                                </div>
-                        </div>
 
                         <!-- Telefono-->
                         <div class="form-group mt-3">
                             <label class="col-md-4 control-label label_Formulario">Número de teléfono</label>  
-                                <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="city" class="form-control"  type="text">
-                                    </div>
+                            <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                        <input name="zip" placeholder="+52" class="form-control"  type="text">
                                 </div>
+                            </div>
                         </div>
 
                         <!-- trabajo o casa-->
@@ -156,9 +134,13 @@
                         
 
                         <!-- boton para registar los datos el domicilio -->
+                        <div class="form-group">
+                            <label class="col-md-4 control-label label_Formulario"></label>
+                            <div class="col-md-4">
+                                <button type="submit" class="btn  btn-outline-secondary" >Agregar <span class="glyphicon glyphicon-send"></span></button>
+                            </div>
+                        </div>
                         <br>
-                        <button name="boton_direccion"> Agregar </button>
-                        <br></br>
                   </form>
               </div>
 
