@@ -15,4 +15,6 @@ sr.reveal('.header-content-right',{
     duration: 2500,
     origin: 'right',
     distance: '300px'
+
 });
+
