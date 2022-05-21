@@ -68,82 +68,87 @@
   
                     <div class="col-md-5 mt-1 m-lg-auto ">
                         <div class="header-content-right">
-                            <form class="well form-horizontal " action="agregarClienteDireccion.php" method="post"  id="contact_form " enctype="multipart/form-data">
+                            <form class="well form-horizontal needs-validation" novalidate action="../php/agregarClienteDireccion.php" method="post"  id="contact_form " enctype="multipart/form-data">
                                 <fieldset>
                                 <br>
                                 <!-- Form Name -->
-                                <h4 class="label_Formulario">Registrarse</h4>
+                                    <h4 class="label_Formulario">Registrarse</h4>
                                 <br>
                                 <!-- Text input-->
-                                
-                                <label class="col-md-4 control-label label_Formulario">Imagen de Perfil</label>  
+                                    <label class="col-md-4 control-label label_Formulario" >Imagen de Perfil</label>  
                                 <br>
-                                <input type="file" name="adjunto" accept=".pdf,.jpg,.png" multiple />
+                                <input type="file" name="imagenUsuario" accept=".pdf,.jpg,.png" class="custom-file-input" multiple >
                                 
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Nombre(s)</label>  
-                                <div class="col-md-10 inputGroupContainer">
-                                <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input  name="first_name" placeholder="Nombre(s)" class="form-control"  type="name">
-                                    </div>
-                                </div>
+                                    <label class="col-md-4 control-label label_Formulario">Nombre(s)</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input  name="first_name" placeholder="Nombre(s)" class="form-control"  type="name" required="">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
+                                        </div>
                                 </div>
                                 
                                 <!-- Text input-->
                                 
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario" >Apellido(s)</label> 
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                                <input name="last_name" placeholder="Apellido(s)" class="form-control"  type="last_name">
+                                    <label class="col-md-4 control-label label_Formulario" >Apellido(s)</label> 
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                                <input name="last_name" placeholder="Apellido(s)" class="form-control"  type="last_name" required="">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
                                     </div>
-                                </div>
                                 </div>
                                 
                                 <!-- Text input-->
-                                    <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Correo Electronico</label>  
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                <input name="email" placeholder="Correo Electronico" class="form-control"  type="email">
+                                <div class="form-group mt-3">
+                                    <label class="col-md-4 control-label label_Formulario">Correo Electronico</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                <input name="email" placeholder="Correo Electronico" class="form-control"  type="email" required="">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
                                     </div>
-                                </div>
                                 </div>
 
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label label_Formulario">Contraseña</label>  
                                         <div class="col-md-10 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                    <input name="contrasenia" placeholder="Ingresar Contraseña" class="form-control"  type="password">
-                                        </div>
-                                    </div>
-                                    </div>
-
-                                    <div class="form-group mt-3">
-                                        <label class="col-md-4 control-label label_Formulario">Repetir Contraseña</label>  
-                                            <div class="col-md-10 inputGroupContainer">
                                             <div class="input-group">
                                                 <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
-                                        <input name="repetirContrasenia" placeholder="Repetir Contraseña" class="form-control"  type="text">
+                                                <input name="contrasenia" placeholder="Ingresar Contraseña" class="form-control"  type="password" required="">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
                                             </div>
                                         </div>
-                                        </div>    
+                                </div>
+
+                                <div class="form-group mt-3">
+                                    <label class="col-md-4 control-label label_Formulario">Repetir Contraseña</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                                <input name="repetirContrasenia" placeholder="Repetir Contraseña" class="form-control"  type="password" required="">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
+                                        </div>
+                                </div>    
                                 
                                 
                                 <!-- Text input-->
                                     
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">Telefono</label>  
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
-                                <input name="phone" placeholder="+52" class="form-control" type="text">
-                                    </div>
-                                </div>
+                                    <label class="col-md-4 control-label label_Formulario">Telefono</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-earphone"></i></span>
+                                                <input name="phone" placeholder="+52" class="form-control" type="tel" required="" pattern="[0-9]+" maxlength="10">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
+                                        </div>
                                 </div>
                                 
                                 <!-- Select Basic -->
@@ -152,10 +157,11 @@
                                 <div class="form-group mt-3"> 
                                     <label class="col-md-4 control-label label_Formulario">Estado</label><br>
                                         <div class="col-md-10 selectContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                                            <select id="estado" name="estado" placeholder="Municipio" class="form-control" type="text"></></select>
-                                        </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
+                                                <select id="estado" name="estado" placeholder="Municipio" class="form-control" type="text" required></></select>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
                                     </div>
                                 </div>
                                 
@@ -164,57 +170,62 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label label_Formulario">Municipio</label>  
                                         <div class="col-md-10 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                            <select id="municipio" name="municipio" placeholder="Municipio" class="form-control" type="text"></select>
-                                        </div>
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                <select id="municipio" name="municipio" placeholder="Municipio" class="form-control" type="text" required></select>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
                                     </div>
-                                    </div>
+                                </div>
                                     
                                     <!-- Text input-->
                                     
                                     <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label label_Formulario">Localidad</label>  
-                                        <div class="col-md-10 inputGroupContainer">
-                                        <div class="input-group">
-                                            <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="city" placeholder="Localidad" class="form-control"  type="text">
-                                        </div>
-                                    </div>
+                                        <label class="col-md-4 control-label label_Formulario">Localidad</label>  
+                                            <div class="col-md-10 inputGroupContainer">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                    <input name="localidad" placeholder="localidad" class="form-control"  type="text" required="">
+                                                    <div class="invalid-feedback">Dato incorrecto</div>
+                                                </div>
+                                            </div>
                                     </div>
 
                                     <div class="form-group mt-3">
                                         <label class="col-md-4 control-label label_Formulario">Calle</label>  
                                             <div class="col-md-10 inputGroupContainer">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="address" placeholder="Calle" class="form-control" type="text">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                    <input name="calle" placeholder="calle" class="form-control" type="text" required="">
+                                                    <div class="invalid-feedback">Dato incorrecto</div>
+                                                </div>
                                             </div>
-                                        </div>
-                                        </div>
+                                    </div>
                                         
                                         <!-- Text input-->
                                         
-                                        <div class="form-group mt-3">
+                                    <div class="form-group mt-3">
                                         <label class="col-md-4 control-label label_Formulario">N&#250;mero</label>  
                                             <div class="col-md-10 inputGroupContainer">
-                                            <div class="input-group">
-                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="city" placeholder="N&#250;mero" class="form-control"  type="text">
+                                                <div class="input-group">
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                    <input name="numeroCasa" placeholder="N&#250;mero" class="form-control"  type="number" required="" >
+                                                    <div class="invalid-feedback">Dato incorrecto</div>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                                                     
                                 <!-- Text input-->
                                 
                                 <div class="form-group mt-3">
-                                <label class="col-md-4 control-label label_Formulario">C&#243;digo postal</label>  
-                                    <div class="col-md-10 inputGroupContainer">
-                                    <div class="input-group">
-                                        <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                <input name="zip" placeholder="C&#243;digo postal" class="form-control"  type="text">
-                                    </div>
-                                </div>
+                                    <label class="col-md-4 control-label label_Formulario">C&#243;digo postal</label>  
+                                        <div class="col-md-10 inputGroupContainer">
+                                            <div class="input-group">
+                                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
+                                                <input name="codigoPostal" placeholder="C&#243;digo postal" class="form-control"  type="number" required="" pattern="[0-9]+" maxlength="5">
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                            </div>
+                                        </div>
                                 </div>
                             
                                 <!-- Success message 
@@ -223,18 +234,18 @@
                                 <br>
                                 <!-- Afregar checkbox-->
                                 <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" checked>
-                                    <label class="form-check-label" for="flexCheckChecked">
-                                    Aceptar Terminos y condiciones
-                                    </label>
+                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckChecked" required>
+                                        <label class="form-check-label" for="flexCheckChecked">
+                                            Aceptar Terminos y condiciones
+                                        </label>
                                 </div>
 
                                 <!-- Button -->
                                 <div class="form-group">
-                                <label class="col-md-4 control-label label_Formulario"></label>
-                                <div class="col-md-4">
-                                    <button type="submit" class="btn  btn-outline-secondary" >Agregar <span class="glyphicon glyphicon-send"></span></button>
-                                </div>
+                                    <label class="col-md-4 control-label label_Formulario"></label>
+                                        <div class="col-md-4">
+                                            <button type="submit" class="btn btn-light" >Agregar <span class="glyphicon glyphicon-send"></span></button>
+                                        </div>
                                 </div>
                             
                                 
@@ -249,7 +260,30 @@
         <!--! Fin del formulario-->  
 
 
-        <!--! Boostrap  Añadimos los scrips JS-->
+          <script>
+                        // Example starter JavaScript for disabling form submissions if there are invalid fields
+                (function () {
+                'use strict'
+
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.querySelectorAll('.needs-validation')
+
+                // Loop over them and prevent submission
+                Array.prototype.slice.call(forms)
+                    .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                        }
+
+                        form.classList.add('was-validated')
+                    }, false)
+                    })
+                })()
+            </script>
+
+        <!-- ? Boostrap  Añadimos los scrips JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
