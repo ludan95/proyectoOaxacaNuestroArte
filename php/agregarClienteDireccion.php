@@ -21,6 +21,7 @@
   $extension_foto = array_pop($explode);
   $nuevoNameFoto  = $newNameFoto.'.'.$extension_foto;
   //Verificando si existe el directorio
+  //  $dirLocal = "../img/imgPerfiles_Usuarios/";
   $dirLocal = "C:/xampp/htdocs/Programacion_Web/proyectoOaxacaNuestroArte/img/imgPerfiles_Usuarios/";
   if (!file_exists($dirLocal)) 
       mkdir($dirLocal, 0777, true);
