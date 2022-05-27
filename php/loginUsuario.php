@@ -1,36 +1,40 @@
 <?php
-
 session_start();
+if(!empty($_SESSION['active'])){
+  header("Location: ../index.html");
+}else{
+  if(!empty($_POST)){
+    if(empty($_POST['correoElectronico']||empty($_POST['password']))){
+      $alert= 'ingresa usuario y clave';
+    }else{
+      require '../php/conexion.php';
+      $user= $_POST['correoElectronico'];
+      $password= md5($_POST['password']);
+      $query= mysqli_query( $conexion,"SELECT * FROM cliente WHERE correo_electronico= '$user' AND contrasenia_usuario= '$password' " );
+      $result= mysqli_num_rows($query);
 
-if (isset($_SESSION['user_id'])) {
-    header("Location: /../../pages/loginUsuarioCliente.html");
-}
-
-require '../php/conexion.php';
-
-if (!empty($_POST['correoElectronico']) && !empty($_POST['password'])) {
-  $records = $conn->prepare('SELECT id_cliente_usuario, correo_electronico, contrasenia_usuario FROM cliente WHERE correo_electronico = :email');
-  $records->bindParam(':email', $_POST['correoElectronico']);
-  $records->execute();
-  $results = $records->fetch(PDO::FETCH_ASSOC);
-
-  $message = '';
-
-  if (count($results) > 0 && password_verify($_POST['password'], $results['contrasenia_usuario'])) {
-    $_SESSION['user_id'] = $results['id_cliente_usuario'];
-    header("Location: /../../pages/loginUsuarioCliente.html");
-  } else {
-    echo " <script> alert('Usuario o contraseña incorrecta, intentalo nuevamente') </script>";
+      if($result>0){
+        $data= mysqli_fetch_array($query);
+        $_SESSION['active']= true;
+        $_SESSION['id_cliente']= $data['id_cliente_usuario'];
+        $_SESSION['nombreCliente']= $data['nombre_cliente'];
+        $_SESSION['apellidoCliente']= $data['apellidos_cliente'];
+        $_SESSION['emailCliente']= $data['correo_electronico'];
+        $_SESSION['passwordCliente']= $data['contrasenia_usuario'];
+        $_SESSION['imagen']= $data['img'];
+        $_SESSION['id_direccion']= $data['id_direccion'];
+        echo " <script> 
+                  alert('Acceso correcto');
+                  location.href='../pages/vistaPerfilUsuario.php';
+              </script>";
+      }else{
+        echo " <script> 
+          alert('usuario o contraseña incorrecto');
+          location.href='../pages/loginUsuarioCliente.php';
+          </script>";
+        session_destroy();
+      }
+    }
   }
 }
-
-/*
-
-https://www.youtube.com/watch?v=37IN_PW5U8E
-
-https://github.com/FaztWeb/php-login-simple/blob/master/login.php
-
-*/
-
 ?>
-

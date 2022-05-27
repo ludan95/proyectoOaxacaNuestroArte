@@ -18,3 +18,6 @@ sr.reveal('.header-content-right',{
 
 });
 
+function cerrarSesionphp{
+    
+};

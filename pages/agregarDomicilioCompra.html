@@ -1,176 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>proyectoOaxacaNuestroArte</title>
-    <!--! Fuente--> 
+    <!--! Fuente-->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap" rel="stylesheet">
     <!--! Boostrap  Añadimos el link al archivo-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <!--! Archivo css local--> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--! Archivo css local-->
     <link rel="stylesheet" href="../css/styles.css">
-    <!--! Scrollreveal--> 
+    <!--! Scrollreveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
-    
+
 
 </head>
+
 <body>
-    <!--! Agregamnos las opciones de navegacion--> 
+    <!--! Agregamnos las opciones de navegacion-->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
+            <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
         </div>
-      </nav>
-      <!--! termina donde se agrega la barra de navegacion-->
+    </nav>
+    <!--! termina donde se agrega la barra de navegacion-->
 
-      <!-- Se muestra la ventana para rellenar los datos del domicilio donde se entregara el producto a comprar-->
-      <header id="Agregar_Domicilio">
-          <br>
+    <!-- Se muestra la ventana para rellenar los datos del domicilio donde se entregara el producto a comprar-->
+    <header id="Agregar_Domicilio">
+        <br>
         <div class="container">
             <div class="titulo_domicilio">
                 <h1>Agregar Domicilio</h1>
             </div>
             <br>
             <div class="row">
-              <div class="col">
-                <form>
+                <div class="col">
+                    <form>
 
-                    <!-- Seleccionar estado-->
-                    <div class="form-group mt-3"> 
-                        <label class="col-md-4 control-label label_Formulario">Estado</label>
+                        <!-- Seleccionar estado-->
+                        <div class="form-group mt-3">
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Estado</label>
                             <div class="col-md-10 selectContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-list"></i></span>
-                            <select name="state" class="form-control selectpicker" >
-                            <option value=" " >----Selecciona tu estado----</option>
-                            <option>Opcion1</option>
-                            <option>Opcion2</option>
-                            <option>Opcion3</option>
-                            </select>
-                        </div>
-                        </div>
-                        </div>
-
-                    <!-- Municipio-->
-                    <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Municipio</label>  
-                        <div class="col-md-10 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="zip" placeholder="Municipio" class="form-control"  type="text">
-                            </div>
-                        </div>
-                    </div
-
-                    <!-- Localidad-->
-                    <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Localidad</label>  
-                        <div class="col-md-10 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="zip" placeholder="Localidad" class="form-control"  type="text">
-                            </div>
-                        </div>
-                    </div
-
-                       <!-- Calle y numero -->
-                       <div class="form-group mt-3">
-                            <label class="col-md-4 control-label label_Formulario">Calle y numero</label>  
-                            <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="zip" placeholder="Calle y numero" class="form-control"  type="text">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-list"></i></span>
+                                    <select name="state" class="form-control
+                                            selectpicker">
+                                        <option value="">----Selecciona tu
+                                            estado----</option>
+                                        <option>Opcion1</option>
+                                        <option>Opcion2</option>
+                                        <option>Opcion3</option>
+                                    </select>
                                 </div>
                             </div>
-                        </div
+                        </div>
 
-                     <!-- Apartado del codigo postal-->
-                     <div class="form-group mt-3">
-                        <label class="col-md-4 control-label label_Formulario">Codigo Postal</label>  
-                        <div class="col-md-10 inputGroupContainer">
-                            <div class="input-group">
-                                <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                    <input name="zip" placeholder="Codigo Postal" class="form-control"  type="text">
+                        <!-- Municipio-->
+                        <div class="form-group mt-3">
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Municipio</label>
+                            <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Municipio" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div <!-- Localidad-->
+                        <div class="form-group mt-3">
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Localidad</label>
+                            <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Localidad" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div <!-- Calle y numero -->
+                        <div class="form-group mt-3">
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Calle y numero</label>
+                            <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Calle y
+                                            numero" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div <!-- Apartado del codigo postal-->
+                        <div class="form-group mt-3">
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Codigo Postal</label>
+                            <div class="col-md-10 inputGroupContainer">
+                                <div class="input-group">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="Codigo
+                                            Postal" class="form-control" type="text">
+                                </div>
                             </div>
                         </div>
-                    </div>
 
 
                         <!-- Telefono-->
                         <div class="form-group mt-3">
-                            <label class="col-md-4 control-label label_Formulario">Número de teléfono</label>  
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Número de teléfono</label>
                             <div class="col-md-10 inputGroupContainer">
                                 <div class="input-group">
-                                    <span class="input-group-addon"><i class="glyphicon glyphicon-home"></i></span>
-                                        <input name="zip" placeholder="+52" class="form-control"  type="text">
+                                    <span class="input-group-addon"><i class="glyphicon
+                                                glyphicon-home"></i></span>
+                                    <input name="zip" placeholder="+52" class="form-control" type="text">
                                 </div>
                             </div>
                         </div>
 
                         <!-- trabajo o casa-->
                         <div class="form-group mt-3">
-                            <label class="col-md-4 control-label label_Formulario">¿Es tu trabajo o tu casa?</label>  
+                            <label class="col-md-4 control-label
+                                    label_Formulario">¿Es tu trabajo o tu casa?</label>
                             <br>
                             <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M7.5 1.75C7.5.784 8.284 0 9.25 0h5.5c.966 0 1.75.784 1.75 1.75V4h4.75c.966 0 1.75.784 1.75 1.75v14.5A1.75 1.75 0 0121.25 22H2.75A1.75 1.75 0 011 20.25V5.75C1 4.784 1.784 4 2.75 4H7.5V1.75zm-5 10.24v8.26c0 .138.112.25.25.25h18.5a.25.25 0 00.25-.25v-8.26A4.233 4.233 0 0118.75 13H5.25a4.233 4.233 0 01-2.75-1.01zm19-3.24a2.75 2.75 0 01-2.75 2.75H5.25A2.75 2.75 0 012.5 8.75v-3a.25.25 0 01.25-.25h18.5a.25.25 0 01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0 01.25-.25h5.5a.25.25 0 01.25.25z"></path></svg>
-                                <label class="col-md-4 control-label label_Formulario">Trabajo</label>  
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1"
+                                    value="option1">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill-rule="evenodd" d="M7.5 1.75C7.5.784 8.284 0 9.25
+                                            0h5.5c.966 0 1.75.784 1.75
+                                            1.75V4h4.75c.966 0 1.75.784 1.75
+                                            1.75v14.5A1.75 1.75 0 0121.25
+                                            22H2.75A1.75 1.75 0 011 20.25V5.75C1
+                                            4.784 1.784 4 2.75 4H7.5V1.75zm-5
+                                            10.24v8.26c0
+                                            .138.112.25.25.25h18.5a.25.25 0
+                                            00.25-.25v-8.26A4.233 4.233 0
+                                            0118.75 13H5.25a4.233 4.233 0
+                                            01-2.75-1.01zm19-3.24a2.75 2.75 0
+                                            01-2.75 2.75H5.25A2.75 2.75 0 012.5
+                                            8.75v-3a.25.25 0
+                                            01.25-.25h18.5a.25.25 0
+                                            01.25.25v3zm-6.5-7V4H9V1.75a.25.25 0
+                                            01.25-.25h5.5a.25.25 0 01.25.25z"></path>
+                                </svg>
+                                <label class="col-md-4 control-label
+                                        label_Formulario">Trabajo</label>
                             </div>
-                              <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94 0l7.5 6.363a1.5 1.5 0 01.53 1.144V19.5a1.5 1.5 0 01-1.5 1.5h-5.75a.75.75 0 01-.75-.75V14h-2v6.25a.75.75 0 01-.75.75H4.5A1.5 1.5 0 013 19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12 3.734l-7.5 6.363V19.5h5v-6.25a.75.75 0 01.75-.75h3.5a.75.75 0 01.75.75v6.25h5v-9.403L12 3.734z"></path></svg>
-                                <label class="col-md-4 control-label label_Formulario">Casa</label>  
-                              </div>
+                            <div class="form-check form-check-inline">
+                                <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2"
+                                    value="option2">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24">
+                                    <path fill-rule="evenodd" d="M11.03 2.59a1.5 1.5 0 011.94
+                                            0l7.5 6.363a1.5 1.5 0 01.53
+                                            1.144V19.5a1.5 1.5 0 01-1.5
+                                            1.5h-5.75a.75.75 0
+                                            01-.75-.75V14h-2v6.25a.75.75 0
+                                            01-.75.75H4.5A1.5 1.5 0 013
+                                            19.5v-9.403c0-.44.194-.859.53-1.144l7.5-6.363zM12
+                                            3.734l-7.5 6.363V19.5h5v-6.25a.75.75
+                                            0 01.75-.75h3.5a.75.75 0
+                                            01.75.75v6.25h5v-9.403L12 3.734z"></path>
+                                </svg>
+                                <label class="col-md-4 control-label
+                                        label_Formulario">Casa</label>
+                            </div>
                         </div>
                         <br>
-                        
+
                         <!-- Indicaciones adicionales para entregar tus compras en esta dirección-->
                         <div class="form-group">
-                            <label class="col-md-4 control-label label_Formulario">Indicaciones adicionales</label>  
-                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripcion del lugar para la entrega del producto"  rows="3"></textarea>
+                            <label class="col-md-4 control-label
+                                    label_Formulario">Indicaciones adicionales</label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Descripcion del lugar para la
+                                    entrega del producto" rows="3"></textarea>
                         </div>
-                        
+
                         <!-- boton para registar los datos el domicilio -->
                         <div class="form-group">
-                            <label class="col-md-4 control-label label_Formulario"></label>
+                            <label class="col-md-4 control-label
+                                    label_Formulario"></label>
                             <div class="col-md-4">
-                                <a href="formaDePago.html" class="btn btn-outline-dark" >Continuar</a>
+                                <a href="formaDePago.html" class="btn
+                                        btn-outline-dark">Continuar</a>
                             </div>
                         </div>
-                        
-                        <br>
-                  </form>
-              </div>
 
-              <!-- Descripcion del producto que se esta comprando-->
-              <div class="col">
-                <div class="text-center">
-                    <img src="../img/imagPrductoCompra/olla_de_barro_negro.jpg" alt="..." class="rounded-circle" width="150">
+                        <br>
+                    </form>
                 </div>
+
+                <!-- Descripcion del producto que se esta comprando-->
                 <div class="col">
-                    <br>
-                    <H2 class="">Olla de Barro Negro</H2>
-                    <h5 class="">Calificacion</h5>
-                    <hr>
-                    <h4 class="">Precio</h4>
-                    <hr>
-                    <h4 class="">Descripcion del producto</h4>
-                    <ul>
-                      <li> Color negro</li>
-                      <li> Altura : 50cm </li>
-                      <li> Material recistente </li>
-                      </ul>
-                  </div>
-              </div>
+                    <div class="text-center">
+                        <img src="../img/imagPrductoCompra/olla_de_barro_negro.jpg" alt="..." class="rounded-circle"
+                            width="150">
+                    </div>
+                    <div class="col">
+                        <br>
+                        <H2 class="">Olla de Barro Negro</H2>
+                        <h5 class="">Calificacion</h5>
+                        <hr>
+                        <h4 class="">Precio</h4>
+                        <hr>
+                        <h4 class="">Descripcion del producto</h4>
+                        <ul>
+                            <li> Color negro</li>
+                            <li> Altura : 50cm </li>
+                            <li> Material recistente </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-          </div>
-      </header>
-      
-       <!--! Boostrap  Añadimos los scrips JS-->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+        </div>
+    </header>
+
+    <!--! Boostrap  Añadimos los scrips JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13"
+        crossorigin="anonymous"></script>
 </body>
+
 </html>

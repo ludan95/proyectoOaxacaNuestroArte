@@ -32,6 +32,7 @@ body{
     margin-top: 40px;
 }
 
+
 /*button{
     background-color: #a2238e;
     text-align: center;
@@ -42,6 +43,47 @@ body{
 
 h1,h2,h4,h5,h6,hr,ul{
     color: beige;
+}
+
+.estilo_borde1{
+    height:1000px;
+    width: 100%;
+    border: 2px solid white;
+    margin-top:20px;
+    text-align:center;
+}
+.estilo_completo{
+    height: 1000px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    margin-top:20px;
+}
+.div_imagen{
+    margin:0px auto;
+    width: 98%;
+    height: 20%;
+    margin-top: 5px;
+}
+.estilo_borde2{
+    height:75px;
+    width: 100%;
+    border: 2px solid white;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+.estilo_borde3{
+    height:810px;
+    width: 100%;
+    border: 2px solid white;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
+input[type="text"]:not([size]) {
+    width: 30em;
 }
 
 #apartado1{
@@ -75,9 +117,6 @@ h1,h2,h4,h5,h6,hr,ul{
 }
 .subtitulo{
     color: rgb(31, 31, 30);
-}
-p{
-    text-align: center;
 }
 
 .imagencentrar{

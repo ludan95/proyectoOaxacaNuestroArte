@@ -22,7 +22,7 @@
   $nuevoNameFoto  = $newNameFoto.'.'.$extension_foto;
   //Verificando si existe el directorio
   //  $dirLocal = "../img/imgPerfiles_Usuarios/";
-  $dirLocal = "C:/xampp/htdocs/Programacion_Web/proyectoOaxacaNuestroArte/img/imgPerfiles_Usuarios/";
+  $dirLocal = "../img/imgPerfiles_Usuarios/";
   if (!file_exists($dirLocal)) 
       mkdir($dirLocal, 0777, true);
   $miDir         = opendir($dirLocal); //Habro el directorio
@@ -31,7 +31,8 @@
   //!
   
   $imagDireccion= $imagenCliente;
-  $password= password_hash($_POST['contrasenia'], PASSWORD_BCRYPT);
+  //$password= password_hash($_POST['contrasenia'], PASSWORD_BCRYPT);
+  $password= md5($_POST['contrasenia']);
   $insertar2= "INSERT INTO cliente  VALUES (NULL, '$nombreCli', '$apellidoCli', '$email', '$imagDireccion','$password', 1)";
   $query2= mysqli_query( $conexion, $insertar2);
 

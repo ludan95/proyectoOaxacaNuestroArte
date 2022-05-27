@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(!empty($_SESSION['active'])){
+  header("Location: ../index.html");
+}else{
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,30 +14,15 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Clientes</h1>
-
-    <table border="1" width="80%" align="center">
-        <tr>
-            <th>Id_Cliente</th>
-            <th>img</th>
-            <th>imagen</th>
-        </tr>
-
-        <?php
-            require 'conexion.php';
-            $consulta= mysqli_query($conexion, "SELECT id_cliente_usuario,img FROM cliente");
-            while ($row= mysqli_fetch_array ($consulta)){
-        ?>
-            <tr>
-                <td> <?php echo $row['id_cliente_usuario']; ?></td>
-                <td> <?php echo $row['img']; ?></td>
-                <td>
-                    <img width="100px" src="<?php echo $row['img']?>">
-                </td>
-            </tr>
-        <?php
-            }
-        ?>
-    </table>
+    <section id="container">
+        <form action="loginUsuario.php" method="post">
+            <h3>Iniciar Sesión</h3>
+            <input type="text" name="correoElectronico" placeholder="Usuario" value="mludan95@gmail.com">
+            <br>
+            <input type="password"name="password" placeholder="Contraseña" >
+            <pclass="alert"></p>
+            <input type="submit"value="INGRESAR">
+        </form>
+    </section>
 </body>
 </html>
