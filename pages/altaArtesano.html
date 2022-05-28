@@ -19,9 +19,9 @@
         <link rel="stylesheet" href="../css/styles.css">
         <!--! Scrollreveal-->
         <script src="https://unpkg.com/scrollreveal"></script>
-
-
-    </head>
+        <!--! iconos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+      </head>
     <body>
 
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -75,13 +75,15 @@
 
 
         <!--! Inicio del formulario-->
+        <header style="min-height: 800px;" class="tituloCatalogo ">
         <header id="headerUno">
             <div class="container-fluid">
                 <div class="row color-texto-blanco">
                     <div class="col-md-7">
                         <div class="header-content-left card-header-pills">
                             <img src="../img/imgPageAltaArtesano/barroNegro.png"
-                                alt="" width="110%">
+                            style="margin-left:20%; margin-top: 2%;"
+                             alt="" width="70%">
                         </div>
                     </div>
 
@@ -155,8 +157,7 @@
                                                         class="glyphicon
                                                         glyphicon-envelope"></i></span>
                                                 <input name="email"
-                                                    placeholder="Correo
-                                                    Electronico"
+                                                    placeholder="Correo Electronico"
                                                     class="form-control"
                                                     type="email" required="">
                                                 <div class="invalid-feedback">Dato
@@ -175,12 +176,10 @@
                                                         class="glyphicon
                                                         glyphicon-envelope"></i></span>
                                                 <input name="contrasenia"
-                                                    placeholder="Ingresar
-                                                    Contraseña"
+                                                    placeholder="Ingresar Contraseña"
                                                     class="form-control"
                                                     type="password" required="">
-                                                <div class="invalid-feedback">Dato
-                                                    incorrecto</div>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
                                             </div>
                                         </div>
                                     </div>
@@ -195,12 +194,10 @@
                                                         class="glyphicon
                                                         glyphicon-envelope"></i></span>
                                                 <input name="repetirContrasenia"
-                                                    placeholder="Repetir
-                                                    Contraseña"
+                                                    placeholder="Repetir Contraseña"
                                                     class="form-control"
                                                     type="password" required="">
-                                                <div class="invalid-feedback">Dato
-                                                    incorrecto</div>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
                                             </div>
                                         </div>
                                     </div>
@@ -213,7 +210,7 @@
                                                 <span class="input-group-addon"><i
                                                         class="glyphicon
                                                         glyphicon-list"></i></span>
-                                                <select name="Region"
+                                                <select name="region"
                                                     class="form-control
                                                     selectpicker" required>
                                                     <option value='' disabled
@@ -252,9 +249,8 @@
                                             label_Formulario"></label>
                                         <div class="col-md-4">
                                             <button type="submit" class="btn
-                                                btn-outline-secondary">Agregar
-                                                <span class="glyphicon
-                                                    glyphicon-send"></span></button>
+                                                btn-light">Agregar <span
+                                                    class="glyphicon glyphicon-send"></span></button>
                                         </div>
                                     </div>
 
@@ -266,8 +262,41 @@
 
             </div>
         </header>
+        </header>
         <!--! Fin del formulario-->
+            <!--? inicio Footer -->
 
+            <footer class="bg-light text-black container-fluid text-center">
+                <nav class="row ">
+                <ul class="col-3" style="margin-top:25px; margin-bottom: -30px;">
+                    <a href="">
+                    <img width="175px" src="../img/iconosinfondo.png" class="mr-2" alt="Logo NuestroArte">
+                    </a>
+                </ul>
+
+                <ul class="col-6 " style="margin-top:25px;">
+                    <p class="text-black">Ubicacion</p>
+                    <a href=""><i class="fa-solid fa-location-dot"></i> Oaxaca, Mexico</a>
+                    <br>
+                    <a href=""><i class="fa-solid fa-phone"></i> 00-0000-000-000</a>
+                    <br>
+                    <a href=""><i class="fa-solid fa-envelope"></i> Prueba@gmail.com</a>
+                </ul>
+
+                <ul class="col-3" style="margin-top:25px;">
+                    <p class="text-black">Redes SoCiales</p>
+                    <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                </ul>
+                <font size="2"">&#169; 2022. Programacion Web, ITSTE.</font>    
+                                </nav>               
+            </footer>
+            <!--? Fin footer-->
 
         <script>
                     // Example starter JavaScript for disabling form submissions if there are invalid fields
