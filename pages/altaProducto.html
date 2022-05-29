@@ -54,27 +54,30 @@
         <section class="py-5">
             <div class="container px-4 px-lg-5 my-5">
                 <div class="row gx-4 gx-lg-5 align-items-center">
-                    <div class="custom-file">
-                        <input type="file" class="custom-file-input"
-                            id="customFileLang" lang="es">
-                        <label class="custom-file-label" for="customFileLang">Seleccionar
-                            Archivo</label>
-                    </div>
                     <div class="col-md-6"><img class="card-img-top mb-5 mb-md-0"
-                            src="../img/imgPageAltaProducto/imagen.png"
+                            src="../img/imgPageAltaProducto/bordado.jpg"
                             alt="..." /></div>
 
                     <!-- Agregar datos-->
-                    <div class="col-md-5 mt-1 m-lg-auto">
+                    <div class="col-md-6 mt-1 m-lg-auto">
                         <div class="header-content-right">
-                            <h1 class="display-7 fw-bolder">Añadir Nuevo
-                                producto</h1>
+                            <h1 class="display-7 fw-bolder">Añadir Nuevo producto</h1>
                             <form>
+                                <div class="custom-file">
+                                    <br>
+                                    <!-- Text input-->
+                                    <label class="col-md-4 control-label label_Formulario">Imagen del producto:</label>
+                                    <br>
+                                    <input type="file" name="imagenUsuario"
+                                        accept=".pdf,.jpg,.png"
+                                        class="custom-file-input" multiple>
+                                </div>
+
                                 <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
+                                    <label class="col-md-6 control-label
                                         label_Formulario">Nombre</label>
                                     <input type="text" class="form-control"
-                                        id="formGroupExampleInput2"
+                                        id="formGroupExampleInput2" name="nombreArtesania"
                                         placeholder="Nombre de la artesania Ej.
                                         Flor">
                                 </div>
@@ -82,7 +85,7 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Material</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="materialArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Material de elaboración">
                                 </div>
@@ -90,7 +93,7 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Color</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="colorArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Color predominante">
                                 </div>
@@ -98,23 +101,23 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Precio</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="precioArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Precio del producto">
                                 </div>
 
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
-                                        label_Formulario">Color</label>
-                                    <input type="text" class="form-control"
+                                        label_Formulario">Cantidad en almacen:</label>
+                                    <input type="text" class="form-control" name="cantidadVenderArtesania"
                                         id="formGroupExampleInput2"
-                                        placeholder="Color predominante">
+                                        placeholder="No de piezas en exitencia">
                                 </div>
 
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Categoria</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="categoriaArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Seleccionar categoria">
                                 </div>
@@ -122,7 +125,7 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Oferta</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="ofertaArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Nuevo precio del producto">
                                 </div>
@@ -130,19 +133,18 @@
                                 <div class="form-group mt-3">
                                     <label class="col-md-4 control-label
                                         label_Formulario">Descripción</label>
-                                    <input type="text" class="form-control"
+                                    <input type="text" class="form-control" name="descripcionArtesania"
                                         id="formGroupExampleInput2"
                                         placeholder="Breve descripción del
                                         producto">
                                 </div>
+
+
                             </form>
 
                             <br>
 
                             <div class="d-flex">
-                                <input class="form-control text-center me-3"
-                                    id="inputQuantity" type="num" value="1"
-                                    style="max-width: 3rem" />
                                 <button class="button" type="button">
                                     <i class="bi-cart-fill me-1"></i>
                                     Agregar Producto

@@ -18,8 +18,8 @@ if(!empty($_SESSION['active'])){
   $regionZona= $_POST['region'];
 
   //!
-  $filename        = $_FILES['imagenUsuario']['name'];
-  $sourceFoto      = $_FILES['imagenUsuario']['tmp_name'];
+  $filename= $_FILES['imagenArtesano']['name'];
+  $sourceFoto      = $_FILES['imagenArtesano']['tmp_name'];
   $logitudPass    = 10;
   $newNameFoto    = substr( md5(microtime()), 1, $logitudPass);
   $explode        = explode('.', $filename);
@@ -38,9 +38,8 @@ if(!empty($_SESSION['active'])){
   $imagDireccion= $imagenCliente;
   //$password= password_hash($_POST['contrasenia'], PASSWORD_BCRYPT);
   $passwordArt= md5($_POST['contrasenia']);
-  $insertar= "INSERT INTO artesano  VALUES (NULL, '$nombreArt', '$apellidoArt', '$emailArt', '$regionZona', '$imagDireccion','$passwordArt', 1, 1)";
-  $query= mysqli_query( $conexion, $insertar2);
-
+  $insertar= "INSERT INTO artesano  VALUES (NULL, '$nombreArt', '$apellidoArt', '$emailArt', '$regionZona', '$imagDireccion','$passwordArt', 1, 1);";
+  $query= mysqli_query( $conexion, $insertar);
 
   if($query){
     echo " <script> 
