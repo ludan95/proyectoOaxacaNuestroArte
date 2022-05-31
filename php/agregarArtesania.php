@@ -4,21 +4,18 @@ if(!empty($_SESSION['active'])){
   header("Location: ../index.html");
 }else{
     require 'conexion.php';
-  
-  $nombreArt= $_POST['first_name'];
-  $apellidoArt= $_POST['last_name'];
-  $emailArt= $_POST['email'];
-  $passwordArt;
-  if(strcmp($_POST['contrasenia'], $_POST['repetirContrasenia'])===0){
-    $passwordArt= $_POST['contrasenia'];
-  }else{
-    $passwordArt="1";
-  }
-
-  $regionZona= $_POST['region'];
+  date_default_timezone_set("America/Mexico_City");
+  $nombreArt= $_POST['nombreArtesania'];
+  $materialArt= $_POST['materialArtesania'];
+  $colorArt= $_POST['colorArtesania'];
+  $precioArt= $_POST['precioArtesania'];
+  $cantidadArt= $_POST['cantidadVenderArtesania'];
+  $categoriaArt= $_POST['categoriaArtesania'];
+  $ofertaArt= $_POST['ofertaArtesania'];
+  $descripcionArtesania= $_POST['descripcionArtesania'];
 
   //!
-  $filename        = $_FILES['imagenArtesano']['name'];
+  $filename= $_FILES['imagenArtesano']['name'];
   $sourceFoto      = $_FILES['imagenArtesano']['tmp_name'];
   $logitudPass    = 10;
   $newNameFoto    = substr( md5(microtime()), 1, $logitudPass);
@@ -27,7 +24,7 @@ if(!empty($_SESSION['active'])){
   $nuevoNameFoto  = $newNameFoto.'.'.$extension_foto;
   //Verificando si existe el directorio
   //  $dirLocal = "../img/imgPerfiles_Usuarios/";
-  $dirLocal = "../img/imgPerfiles_Usuarios/";
+  $dirLocal = "../img/imgArtesanias/";
   if (!file_exists($dirLocal)) 
       mkdir($dirLocal, 0777, true);
   $miDir         = opendir($dirLocal); //Habro el directorio
@@ -36,12 +33,13 @@ if(!empty($_SESSION['active'])){
   //!
   
   $imagDireccion= $imagenCliente;
-  //$password= password_hash($_POST['contrasenia'], PASSWORD_BCRYPT);
-  $passwordArt= md5($_POST['contrasenia']);
-  $insertar= "INSERT INTO artesano  VALUES (NULL, '$nombreArt', '$apellidoArt', '$emailArt', '$regionZona', '$imagDireccion','$passwordArt', 1, 1);";
+  $insertar= "INSERT INTO artesania  VALUES (NULL, '$nombreArt', '$materialArt', '$colorArt', '$precioArt', '$cantidadArt', '$categoriaArt', '$imagDireccion', '$descripcionArtesania', '$ofertaArt');";
   $query= mysqli_query( $conexion, $insertar);
 
-  if($query){
+  $insertar2= "INSERT INTO detalle_artesania VALUES ( 2, 1, '$cantidadArt', '$precioArt', current_date )"; 
+  $query2= mysqli_query( $conexion, $insertar2);
+
+    if($query&&$query2){
     echo " <script> 
               alert('correcto');
               location.href= '../index.html';

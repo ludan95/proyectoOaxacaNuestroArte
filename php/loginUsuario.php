@@ -16,6 +16,7 @@ if(!empty($_SESSION['active'])){
       if($result>0){
         $data= mysqli_fetch_array($query);
         $_SESSION['active']= true;
+        $_SESSION['tipoSession']="usuario";
         $_SESSION['id_cliente']= $data['id_cliente_usuario'];
         $_SESSION['nombreCliente']= $data['nombre_cliente'];
         $_SESSION['apellidoCliente']= $data['apellidos_cliente'];
