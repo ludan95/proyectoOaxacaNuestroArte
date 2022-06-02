@@ -18,8 +18,8 @@ if(!empty($_SESSION['active'])){
   $regionZona= $_POST['region'];
 
   //!
-  $filename        = $_FILES['imagenArtesano']['name'];
-  $sourceFoto      = $_FILES['imagenArtesano']['tmp_name'];
+  $filename        = $_FILES['imagenUsuario']['name'];
+  $sourceFoto      = $_FILES['imagenUsuario']['tmp_name'];
   $logitudPass    = 10;
   $newNameFoto    = substr( md5(microtime()), 1, $logitudPass);
   $explode        = explode('.', $filename);
@@ -27,7 +27,7 @@ if(!empty($_SESSION['active'])){
   $nuevoNameFoto  = $newNameFoto.'.'.$extension_foto;
   //Verificando si existe el directorio
   //  $dirLocal = "../img/imgPerfiles_Usuarios/";
-  $dirLocal = "../img/imgPerfiles_Usuarios/";
+  $dirLocal = "../img/imgPerfiles_Artesanos/";
   if (!file_exists($dirLocal)) 
       mkdir($dirLocal, 0777, true);
   $miDir         = opendir($dirLocal); //Habro el directorio

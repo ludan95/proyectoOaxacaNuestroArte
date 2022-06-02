@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!empty($_SESSION['active'])) {
+if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="usuario" ) {
     header("Location:../index.html");
 }
 ?>
@@ -29,7 +29,7 @@ if (!empty($_SESSION['active'])) {
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
+            <a class="navbar-brand" href="../index.html">OaxacaNuestroArte</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>

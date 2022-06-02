@@ -1,6 +1,6 @@
 <?php
 session_start();
-if (!empty($_SESSION['active'])) {
+if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
     header("Location:../index.html");
 }
 ?>
@@ -21,15 +21,15 @@ if (!empty($_SESSION['active'])) {
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
     <!--! Scrollreveal-->
     <script src="https://unpkg.com/scrollreveal"></script>
-
-
-</head>
+        <!--! iconos-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+     </head>
 
 <body class="inicioSecion2">
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
+            <a class="navbar-brand" href="../index.html">OaxacaNuestroArte</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -67,37 +67,70 @@ if (!empty($_SESSION['active'])) {
     </nav>
 
 
-    <!--? Inicio formulario -->
-    <div class="label_Formulario">
-        <div class="imagenlogin">
-            <img src="../img/imgPageLogin/logoBlanco.png" width="20%" style="margin-top:25px;">
-        </div>
-
-        <form action="../php/loginArtesano.php" class="formulario needs-validation" novalidate method="post" id="contact_form " enctype="multipart/form-data">
-            <h1 class="titulologin">Inicio de Sesion</h1>
-            <div class="contenedor">
-                <div class="input-contenedor">
-                    <i class="fas fa-envelope icon"></i>
-                    <input name="correoElectronicoA" type="email" placeholder="Correo Electronico" required value="artesano@gmail.com">
-                    <div class="invalid-feedback">Dato incorrecto</div>
-                </div>
-
-                <div class="input-contenedor">
-                    <i class="fas fa-key icon"></i>
-                    <input name="passwordA" type="password" placeholder="Contraseña" required>
-                    <div class="invalid-feedback">Dato incorrecto</div>
-
-                </div>
-                <div class="form-group">
-                    <button type="submit" class=" button">Conectar <span class="glyphicon glyphicon-send"></span></button>
-                </div>
-                <br>
-                <p class="color-texto-blanco">¿No tienes una cuenta? <a class="link" href="altaUsuario.html" class="linkRegistrar">Registrarse </a></p>
+    <!--! Inicio del formulario-->
+        <div class="label_Formulario" style="min-height: 800px;">
+            <div class="imagenlogin">
+                <img src="../img/imgPageLogin/logoBlanco.png" width="20%" style="margin-top:25px;">
             </div>
-        </form>
-    </div>
+
+            <form action="../php/loginArtesano.php" class="formulario needs-validation" novalidate method="post" id="contact_form " enctype="multipart/form-data">
+                <h1 class="titulologin">Inicio de Sesion</h1>
+                <div class="contenedor">
+                    <div class="input-contenedor">
+                        <i class="fas fa-envelope icon"></i>
+                        <input name="correoElectronicoA" type="email" placeholder="Correo Electronico" required value="artesano@gmail.com">
+                        <div class="invalid-feedback">Dato incorrecto</div>
+                    </div>
+
+                    <div class="input-contenedor">
+                        <i class="fas fa-key icon"></i>
+                        <input name="passwordA" type="password" placeholder="Contraseña" required>
+                        <div class="invalid-feedback">Dato incorrecto</div>
+
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class=" button">Conectar <span class="glyphicon glyphicon-send"></span></button>
+                    </div>
+                    <br>
+                    <p class="color-texto-blanco">¿No tienes una cuenta? <a class="link" href="altaUsuario.html" class="linkRegistrar">Registrarse </a></p>
+                </div>
+            </form>
+        </div>
     <!--? Fin formulario -->
 
+            <!--? inicio Footer -->
+
+            <footer class="bg-light text-black container-fluid text-center">
+                <nav class="row ">
+                <ul class="col-3" style="margin-top:25px; margin-bottom: -30px;">
+                    <a href="">
+                    <img width="175px" src="../img/iconosinfondo.png" class="mr-2" alt="Logo NuestroArte">
+                    </a>
+                </ul>
+
+                <ul class="col-6 " style="margin-top:25px;">
+                    <p class="text-black">Ubicacion</p>
+                    <a href=""><i class="fa-solid fa-location-dot"></i> Oaxaca, Mexico</a>
+                    <br>
+                    <a href=""><i class="fa-solid fa-phone"></i> 00-0000-000-000</a>
+                    <br>
+                    <a href=""><i class="fa-solid fa-envelope"></i> Prueba@gmail.com</a>
+                </ul>
+
+                <ul class="col-3" style="margin-top:25px;">
+                    <p class="text-black">Redes SoCiales</p>
+                    <a href=""><i class="fa-brands fa-facebook"></i> Facebook</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-twitter"></i> Twitter</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-instagram"></i> Instagram</a>
+                    <br>
+                    <a href=""><i class="fa-brands fa-pinterest"></i> Pinterest</a>
+                </ul>
+                <font size="2"">&#169; 2022. Programacion Web, ITSTE.</font>    
+                                </nav>               
+            </footer>
+            <!--? Fin footer-->
     <script>
         // Example starter JavaScript for disabling form submissions if there are invalid fields
         (function() {

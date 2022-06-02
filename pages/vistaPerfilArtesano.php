@@ -32,7 +32,7 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
   <!--! Agregamnos las opciones de navegacion-->
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">OaxacaNuestroArte</a>
+      <a class="navbar-brand" href="../index.html">OaxacaNuestroArte</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -86,11 +86,11 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
 
       <div class="col col-lg-5 estilo_completo ">
         <div class="estilo_borde2 row-cols-1">
-          <h4>Perfil publico</h4>
+          <h4>Perfil Artesano</h4>
           <h5>Informacion personal</h5>
         </div>
 
-        <div class="estilo_borde3 tamanio_alto2 row-cols-5 color-texto-blanco">
+        <div class="estilo_borde3 tamanio_alto2 row-cols-6 color-texto-blanco">
           <br>
           <label style="margin-left: 20px;">Nombre </label>
           <br>
@@ -102,14 +102,25 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
           <input style="margin-left: 30px;" type="text" readonly=»readonly» value="<?php echo $_SESSION['apellidoArtesano']; ?>" />
           <br>
           <br>
-          <label style="margin-left: 20px;">correo electronico </label>
+          <label style="margin-left: 20px;">Correo_Electronico </label>
           <br>
           <input style="margin-left: 30px;" type="text" readonly=»readonly» value="<?php echo $_SESSION['emailArtesano']; ?>" />
+          <br>
+          <br>
+          <label style="margin-left: 20px;">Region </label>
+          <br>
+          <input style="margin-left: 30px;" type="text" readonly=»readonly» value="<?php echo $_SESSION['regionArtesano']; ?>" />
           <br>
           <br>
           <label style="margin-left: 20px;">Contraseña </label>
           <br>
           <input style="margin-left: 30px;" type="text" readonly=»readonly» value="********" />
+        </div>
+
+        <div class="estilo_borde4" style="margin-top: 5px;">
+          <a href="agregarArtesania.php">Agregar Artesania</a>  <br>
+          <a href="agregarDireccion.html">agregar Direccion</a> <br>
+          <a href="agregarTarjeta.html">Agregar Tarjeta</a>
         </div>
 
         <div class="estilo_borde2 row-cols-1 css_centrar">
@@ -160,7 +171,7 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
         <a href=""><i class="fa-brands fa-pinterest"></i> Pinterest</a>
       </ul>
       <font size="2"">&#169; 2022. Programacion Web, ITSTE.</font>    
-                    </nav>               
+      </nav>               
   </footer>
         <!--? Fin footer-->
 

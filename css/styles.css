@@ -85,6 +85,14 @@ h1,h2,h4,h5,h6,hr,ul{
     margin-top:20px;
 }
 
+.estilo_borde4{
+    height:200px;
+    width: 100%;
+    border: 2px solid white;
+    margin-bottom: 20px;
+    margin-top:20px;
+}
+
 input[type="text"]:not([size]) {
     width: 30em;
 }
