@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.0
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 25-05-2022 a las 09:23:34
--- Versión del servidor: 10.4.22-MariaDB
--- Versión de PHP: 8.1.2
+-- Tiempo de generación: 02-06-2022 a las 05:07:07
+-- Versión del servidor: 10.4.24-MariaDB
+-- Versión de PHP: 8.1.6
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -40,6 +40,26 @@ CREATE TABLE `artesania` (
   `oferta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Volcado de datos para la tabla `artesania`
+--
+
+INSERT INTO `artesania` (`id_artesania`, `nombre`, `material`, `color_predominante`, `precio`, `cantidad_vender`, `categoria`, `img`, `descripcion`, `oferta`) VALUES
+(1, 'jarron', 'barro', 'negro', 200, 5, 'ceramica', 'sinimg', 'ghjjjuyju', 0),
+(2, '', '', '', 0, 0, '', '', '', 0),
+(3, 'jarron de barro', 'barro', 'negro ', 200, 3, 'Ceramica', '../img/imgArtesanias//6cd1b45c24.', 'jarron negro', 0),
+(4, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//bc1314b5fe.', 'jarron negro', 0),
+(5, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//8439a42d66.', 'jarron negro', 0),
+(6, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//f58da962fa.', 'jarron negro', 0),
+(7, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//6c8d5b7c5b.', 'jarron negro', 0),
+(8, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//7bfb00efcd.', 'jarron negro', 0),
+(9, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//ed67688945.', 'jarron negro', 0),
+(10, 'jarron de barro', 'barro', 'negro ', 245, 33, 'Ceramica', '../img/imgArtesanias//32a9fae17d.', 'jarron negro', 0),
+(11, 'jarron de barro', 'barro', 'negro ', 55, 44, 'Textil', '../img/imgArtesanias//4b971b6c83.', 'jarron negro', 0),
+(12, 'jarron de barro', 'barro', 'negro ', 55, 44, 'Textil', '../img/imgArtesanias//6be89f7a27.', 'jarron negro', 0),
+(13, 'jarron de barro', 'barro', 'negro ', 55, 44, 'Textil', '../img/imgArtesanias//e0660709a8.', 'jarron negro', 0),
+(14, 'jarron de barro', 'barro', 'negro ', 55, 44, 'Textil', '../img/imgArtesanias//9081163627.', 'jarron negro', 0);
+
 -- --------------------------------------------------------
 
 --
@@ -52,11 +72,24 @@ CREATE TABLE `artesano` (
   `apellidos_artesano` varchar(50) NOT NULL,
   `correo_electronico` varchar(50) NOT NULL,
   `region` varchar(50) NOT NULL,
-  `img` varchar(50) NOT NULL,
+  `img` varchar(200) NOT NULL,
   `contrasenia_artesano` varchar(50) NOT NULL,
   `id_direccion` int(11) NOT NULL,
   `id_tarjeta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `artesano`
+--
+
+INSERT INTO `artesano` (`id_artesano`, `nombre_artesano`, `apellidos_artesano`, `correo_electronico`, `region`, `img`, `contrasenia_artesano`, `id_direccion`, `id_tarjeta`) VALUES
+(2, 'artesano', 'artesano', 'artesano@gmail.com', 'Costa', '../img/imgPerfiles_Artesanos//a54ebee44f.jpg', 'acc801aaf80d6f8f8e8b542102ea9e78', 1, 1),
+(8, 'ludan', 'solano', 'artesano@gmail.com', 'Istmo', '../img/imgPerfiles_Artesanos/51f4ed3888.', 'acc801aaf80d6f8f8e8b542102ea9e78', 1, 1),
+(9, 'ludan', 'solano', 'artesanop@gmail.com', 'Istmo', '../img/imgPerfiles_Usuarios//7bf20ea12a.jpg', 'acc801aaf80d6f8f8e8b542102ea9e78', 1, 1),
+(10, 'p', 'p', 'p@gmail.com', 'Costa', '../img/imgPerfiles_Artesanos//4dfbf03ae1.', '83878c91171338902e0fe0fb97a8c47a', 1, 1),
+(11, 'totoro', 'totoro', 't@gmail.com', 'Sierra Norte', '../img/imgPerfiles_Artesanos//02261e3d95.', 'e358efa489f58062f10dd7316b65649e', 1, 1),
+(12, 'totoro', 'totoro', 't@gmail.com', 'Cañada', '../img/imgPerfiles_Artesanos//4ed8b95779.', '415290769594460e2e485922904f345d', 1, 1),
+(13, 'Luis Daniel', 'Vargaz intento', 'int@gmail.com', 'Mixteca', '../img/imgPerfiles_Artesanos//3bd088cdbd.jpg', 'acc801aaf80d6f8f8e8b542102ea9e78', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -80,8 +113,10 @@ CREATE TABLE `cliente` (
 
 INSERT INTO `cliente` (`id_cliente_usuario`, `nombre_cliente`, `apellidos_cliente`, `correo_electronico`, `img`, `contrasenia_usuario`, `id_direccion`) VALUES
 (1, 'luis daniel', 'solano vargaz', 'mludan95@gmai.com', 'sin/Img', '1e62df357576d6d53f3dcdca02ce93da', 1),
-(12, 'l', 'l', 'l@l.com', '../img/imgPerfiles_Usuarios//d71e2a577b.jpg', '$2y$10$pLU59toPSZkvXYnTeXkI/OPWeFkvLw.JxszMFScLNauNANbPyOItu', 1),
-(13, 'd', 'd', 'd@d.com', '../img/imgPerfiles_Usuarios//2691f5da63.jpg', '$2y$10$tP2Ua3V7CjAdDUK8ZWDY.eGw.MMFo3celesl/3Zt7Rlqv6X.62ezS', 1);
+(14, 'Luis Daniel', 'Vargaz', 'mludan95@gmail.com', '../img/imgPerfiles_Usuarios/26b940bec9.jpg', 'e10adc3949ba59abbe56e057f20f883e', 1),
+(15, 'ludan', 'solano', 'mludan95@gmail.com', '../img/imgPerfiles_Usuarios//7a9e6455ac.png', 'acc801aaf80d6f8f8e8b542102ea9e78', 1),
+(16, '1', 'q', '1@gmail.com', '../img/imgPerfiles_Usuarios//7bf20ea12a.jpg', 'acc801aaf80d6f8f8e8b542102ea9e78', 1),
+(17, 'ludan', 'solano', '12@gmail.com', '../img/imgPerfiles_Usuarios//2711a6b5fb.jpg', 'acc801aaf80d6f8f8e8b542102ea9e78', 1);
 
 -- --------------------------------------------------------
 
@@ -94,8 +129,21 @@ CREATE TABLE `detalle_artesania` (
   `id_artesania` int(11) NOT NULL,
   `cantidad_agregar` int(11) NOT NULL,
   `precio` int(11) NOT NULL,
-  `fecha` int(11) NOT NULL
+  `fecha` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `detalle_artesania`
+--
+
+INSERT INTO `detalle_artesania` (`id_artesano`, `id_artesania`, `cantidad_agregar`, `precio`, `fecha`) VALUES
+(2, 1, 4, 200, '2022-05-30'),
+(2, 1, 33, 245, '0000-00-00'),
+(2, 1, 33, 245, '0000-00-00'),
+(2, 1, 44, 55, '0000-00-00'),
+(2, 1, 44, 55, '0000-00-00'),
+(2, 1, 44, 55, '0000-00-00'),
+(2, 1, 44, 55, '2022-05-30');
 
 -- --------------------------------------------------------
 
@@ -249,19 +297,19 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `artesania`
 --
 ALTER TABLE `artesania`
-  MODIFY `id_artesania` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_artesania` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `artesano`
 --
 ALTER TABLE `artesano`
-  MODIFY `id_artesano` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_artesano` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `id_cliente_usuario` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 
 --
 -- AUTO_INCREMENT de la tabla `direccion`
