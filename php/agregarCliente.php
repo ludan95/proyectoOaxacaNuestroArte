@@ -38,13 +38,29 @@
 
 
   if($query2){
+    session_start();
+    $query= mysqli_query( $conexion,"SELECT * FROM cliente WHERE correo_electronico= '$email' AND contrasenia_usuario= '$password' " );
+    $result= mysqli_num_rows($query);
+
+    if($result>0){
+      $data= mysqli_fetch_array($query);
+      $_SESSION['active']= true;
+      $_SESSION['tipoSession']="usuario";
+      $_SESSION['id_cliente']= $data['id_cliente_usuario'];
+      $_SESSION['nombreCliente']= $data['nombre_cliente'];
+      $_SESSION['apellidoCliente']= $data['apellidos_cliente'];
+      $_SESSION['emailCliente']= $data['correo_electronico'];
+      $_SESSION['passwordCliente']= $data['contrasenia_usuario'];
+      $_SESSION['imagen']= $data['img'];
+      $_SESSION['id_direccion']= $data['id_direccion'];
     echo " <script> 
-              alert('correcto');
-              location.href= '../pages/altaUsuario.html';
+              alert('Bienvenido a OaxacaNuestroArte');
+              location.href= '../pages/vistaPerfilUsuario.php';
            </script>";
+    }
   }else{
     echo " <script> alert('incorrecto') </script>";
   }
   mysqli_close($conexion);
-?>
 
+?>

@@ -42,10 +42,28 @@ if(!empty($_SESSION['active'])){
   $query= mysqli_query( $conexion, $insertar);
 
   if($query){
+    session_start();
+    $query= mysqli_query( $conexion,"SELECT * FROM artesano WHERE correo_electronico= '$emailArt' AND contrasenia_artesano= '$passwordArt' " );
+    $result= mysqli_num_rows($query);
+
+    if($result>0){
+      $data= mysqli_fetch_array($query);
+      $_SESSION['active']= true;
+      $_SESSION['tipoSession']="artesano";
+      $_SESSION['id_artesano']= $data['id_artesano'];
+      $_SESSION['nombreArtesano']= $data['nombre_artesano'];
+      $_SESSION['apellidoArtesano']= $data['apellidos_artesano'];
+      $_SESSION['emailArtesano']= $data['correo_electronico'];
+      $_SESSION['regionArtesano']= $data['region'];
+      $_SESSION['passwordCliente']= $data['contrasenia_usuario'];
+      $_SESSION['imagenArtesano']= $data['img'];
+      $_SESSION['id_direccionArtesano']= $data['id_direccion'];
+      $_SESSION['id_tarjetaArtesano']= $data['id_tarjeta'];
     echo " <script> 
               alert('correcto');
-              location.href= '../index.html';
+              location.href= '../pages/vistaPerfilArtesano.php';
            </script>";
+    }
   }else{
     echo " <script> alert('incorrecto') </script>";
   }

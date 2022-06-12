@@ -36,7 +36,11 @@ if(!empty($_SESSION['active'])){
   $insertar= "INSERT INTO artesania  VALUES (NULL, '$nombreArt', '$materialArt', '$colorArt', '$precioArt', '$cantidadArt', '$categoriaArt', '$imagDireccion', '$descripcionArtesania', '$ofertaArt');";
   $query= mysqli_query( $conexion, $insertar);
 
-  $insertar2= "INSERT INTO detalle_artesania VALUES ( 2, 1, '$cantidadArt', '$precioArt', current_date )"; 
+  $id_artesaniaValor=mysqli_query( $conexion, "Select count(*) from artesania");
+
+
+  $id_artesano= $_SESSION['id_artesano'];
+  $insertar2= "INSERT INTO detalle_artesania VALUES ( '$id_artesano', '$id_artesaniaValor', '$cantidadArt', '$precioArt', current_date )"; 
   $query2= mysqli_query( $conexion, $insertar2);
 
     if($query&&$query2){
