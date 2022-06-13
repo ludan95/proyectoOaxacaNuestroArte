@@ -11,26 +11,27 @@ if(!empty($_SESSION['active'])&& $_SESSION['tipoSession']=="artesano"){
     $categoriaArt= $_POST['categoriaArtesania'];
     $ofertaArt= $_POST['ofertaArtesania'];
     $descripcionArtesania= $_POST['descripcionArtesania'];
-
+//!
   //!
-  $filename= $_FILES['imagenArtesania']['name'];
-  $sourceFoto      = $_FILES['imagenArtesania']['tmp_name'];
+  $filename        = $_FILES['imagenUsuario']['name'];
+  $sourceFoto      = $_FILES['imagenUsuario']['tmp_name'];
   $logitudPass    = 10;
   $newNameFoto    = substr( md5(microtime()), 1, $logitudPass);
   $explode        = explode('.', $filename);
   $extension_foto = array_pop($explode);
   $nuevoNameFoto  = $newNameFoto.'.'.$extension_foto;
   //Verificando si existe el directorio
-  $dirLocal = "../img/imgArtesanias";
+  //  $dirLocal = "../img/imgPerfiles_Usuarios/";
+  $dirLocal = "../img/imgArtesanias/";
   if (!file_exists($dirLocal)) 
       mkdir($dirLocal, 0777, true);
   $miDir         = opendir($dirLocal); //Habro el directorio
   $imagenCliente = $dirLocal.'/'.$nuevoNameFoto;
   move_uploaded_file($sourceFoto, $imagenCliente);
   //!
+  //!
 
-    $imagDireccion= $imagenCliente;
-    $insertar= "INSERT INTO artesania  VALUES (NULL, '$nombreArt', '$materialArt', '$colorArt', '$precioArt', '$cantidadArt', '$categoriaArt', '$imagDireccion', '$descripcionArtesania', '$ofertaArt');";
+    $insertar= "INSERT INTO artesania  VALUES (NULL, '$nombreArt', '$materialArt', '$colorArt', '$precioArt', '$cantidadArt', '$categoriaArt', '$imagenCliente', '$descripcionArtesania', '$ofertaArt');";
     $query= mysqli_query( $conexion, $insertar);
 
     $id_artesaniaValor=mysqli_query( $conexion, "Select * from artesania");
@@ -55,4 +56,10 @@ if(!empty($_SESSION['active'])&& $_SESSION['tipoSession']=="artesano"){
 else{
   header("Location: ../index.html");
 }
+
+// REiniciar valores autoincrementables
+// SET @autoid :=0;
+// update artesania set id_artesania= @autoid := (@autoid+1);
+// alter table artesania AUTO_increment = 1;
+
 ?>

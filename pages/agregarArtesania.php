@@ -66,13 +66,14 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
                     <div class="col-md-6 mt-1 m-lg-auto">
                         <div class="header-content-right">
                             <h1 class="display-7 fw-bolder">Añadir Nuevo producto</h1>
-                            <form class="needs-validation" action="../php/agregarArtesania.php" method="post" novalidate>
+                            <form class="needs-validation" action="../php/agregarArtesania.php" method="POST" enctype="multipart/form-data" novalidate>
                                 <fieldset>
                                     <br>
                                     <label class="col-md-4 control-label label_Formulario">Imagen de Perfil</label>
                                         <br>
-                                    <input type="file" name="imagenArtesania" accept=,.jpg,.png" class="custom-file-input" multiple>
-
+                                        <div class="custom-file">
+                                            <input type="file" name="imagenUsuario" accept=,.jpg,.png" class="custom-file-input" multiple>
+                                        </div>
                                     <div class="form-group mt-3">
                                         <label class="col-md-4 control-label
                                             label_Formulario">Nombre</label>

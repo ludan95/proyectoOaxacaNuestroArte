@@ -18,11 +18,11 @@
 
         <?php
             require 'conexion.php';
-            $consulta= mysqli_query($conexion, "SELECT id_cliente_usuario,img FROM cliente");
+            $consulta= mysqli_query($conexion, "SELECT id_artesania,img FROM artesania");
             while ($row= mysqli_fetch_array ($consulta)){
         ?>
             <tr>
-                <td> <?php echo $row['id_cliente_usuario']; ?></td>
+                <td> <?php echo $row['id_artesania']; ?></td>
                 <td> <?php echo $row['img']; ?></td>
                 <td>
                     <img width="100px" src="<?php echo $row['img']?>">
