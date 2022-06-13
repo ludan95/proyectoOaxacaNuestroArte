@@ -78,7 +78,7 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
                 <div class="contenedor">
                     <div class="input-contenedor">
                         <i class="fas fa-envelope icon"></i>
-                        <input name="correoElectronicoA" type="email" placeholder="Correo Electronico" required value="artesano@gmail.com">
+                        <input name="correoElectronicoA" type="email" placeholder="Correo Electronico" required >
                         <div class="invalid-feedback">Dato incorrecto</div>
                     </div>
 

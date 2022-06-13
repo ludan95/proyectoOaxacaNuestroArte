@@ -67,127 +67,123 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="artesano" ) {
                         <div class="header-content-right">
                             <h1 class="display-7 fw-bolder">Añadir Nuevo producto</h1>
                             <form class="needs-validation" action="../php/agregarArtesania.php" method="post" novalidate>
-                                <div class="custom-file">
+                                <fieldset>
                                     <br>
-                                    <!-- Text input-->
-                                    <label class="col-md-4 control-label
-                                    label_Formulario">Imagen de Perfil</label>
-                                    <br>
-                                    <input type="file" name="imagenArtesano"
-                                        accept=".pdf,.jpg,.png"
-                                        class="custom-file-input" multiple>
-                                </div>
+                                    <label class="col-md-4 control-label label_Formulario">Imagen de Perfil</label>
+                                        <br>
+                                    <input type="file" name="imagenArtesania" accept=,.jpg,.png" class="custom-file-input" multiple>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Nombre</label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="nombreArtesania"
-                                                placeholder="Nombre de la artesania Ej. Flor"
-                                                class="form-control"
-                                                type="text" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Nombre</label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="nombreArtesania"
+                                                    placeholder="Nombre de la artesania Ej. Flor"
+                                                    class="form-control"
+                                                    type="text" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Material</label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="materialArtesania"
-                                                placeholder="Material de elaboración"
-                                                class="form-control"
-                                                type="text" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Material</label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="materialArtesania"
+                                                    placeholder="Material de elaboración"
+                                                    class="form-control"
+                                                    type="text" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Color</label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="colorArtesania"
-                                                placeholder="Color predominante"
-                                                class="form-control"
-                                                type="text" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Color</label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="colorArtesania"
+                                                    placeholder="Color predominante"
+                                                    class="form-control"
+                                                    type="text" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Precio</label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="precioArtesania"
-                                                placeholder="Precio del producto P/U"
-                                                class="form-control"
-                                                type="number" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Precio</label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="precioArtesania"
+                                                    placeholder="Precio del producto P/U"
+                                                    class="form-control"
+                                                    type="number" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Cantidad en almacen:</label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="cantidadVenderArtesania"
-                                                placeholder="No de piezas en exitencia"
-                                                class="form-control"
-                                                type="number" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Cantidad en almacen:</label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="cantidadVenderArtesania"
+                                                    placeholder="No de piezas en exitencia"
+                                                    class="form-control"
+                                                    type="number" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Categoria: </label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <select name="categoriaArtesania" class="form-control selectpicker" required>
-                                                <option value='' disabled selected>Selecciona el tipo de artesania</option>
-                                                <option>Madera</option>
-                                                <option>Ceramica</option>
-                                                <option>Palma</option>
-                                                <option>Textil</option> 
-                                                <option>Joyeria</option>
-                                            </select>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Categoria: </label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <select name="categoriaArtesania" class="form-control selectpicker" required>
+                                                    <option value='' disabled selected>Selecciona el tipo de artesania</option>
+                                                    <option>Madera</option>
+                                                    <option>Ceramica</option>
+                                                    <option>Palma</option>
+                                                    <option>Textil</option> 
+                                                    <option>Joyeria</option>
+                                                </select>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Oferta: </label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="ofertaArtesania"
-                                                placeholder="Cantidad de descuento en %"
-                                                class="form-control"
-                                                type="number" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Oferta: </label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="ofertaArtesania"
+                                                    placeholder="Cantidad de descuento en %"
+                                                    class="form-control"
+                                                    type="number" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group mt-3">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario">Descripcion: </label>
-                                    <div class="col-md-11 inputGroupContainer">
-                                            <input name="descripcionArtesania"
-                                                placeholder="Breve descripción del  producto"
-                                                class="form-control"
-                                                type="text" style=" HEIGHT: 75px;" required>
-                                            <div class="invalid-feedback">Dato incorrecto</div>
+                                    <div class="form-group mt-3">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario">Descripcion: </label>
+                                        <div class="col-md-11 inputGroupContainer">
+                                                <input name="descripcionArtesania"
+                                                    placeholder="Breve descripción del  producto"
+                                                    class="form-control"
+                                                    type="text" style=" HEIGHT: 75px;" required>
+                                                <div class="invalid-feedback">Dato incorrecto</div>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <div class="form-group">
-                                    <label class="col-md-4 control-label
-                                        label_Formulario"></label>
-                                    <div class="col-md-4">
-                                        <button type="submit" class="btn
-                                            btn-light">Agregar <span
-                                                class="glyphicon
-                                                glyphicon-send"></span></button>
+                                    <div class="form-group">
+                                        <label class="col-md-4 control-label
+                                            label_Formulario"></label>
+                                        <div class="col-md-4">
+                                            <button type="submit" class="btn
+                                                btn-light">Agregar <span
+                                                    class="glyphicon
+                                                    glyphicon-send"></span></button>
+                                        </div>
                                     </div>
-                                </div>
+                                </fieldset>
                             </form>
 
                             <br>
