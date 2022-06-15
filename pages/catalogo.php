@@ -156,11 +156,8 @@
                   </div>
                   <!-- Product actions-->
                   <div class="card-footer p-4 pt-0 border-top-0 bg-transparent">
-                  <?php echo $row['descripcion']?>
-                    <p>¡Diseño UNICO!</p>
-                    <?php echo $row['img_3d']?>
                     <div class="text-center">
-                      <a class="btn btn-outline-dark mt-auto" href="#">Comprar</a>
+                      <a class="btn btn-outline-dark mt-auto" href="productoCompra.php">Detalles</a>
                     </div>
                   </div>
                 </div>
