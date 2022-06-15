@@ -13,17 +13,19 @@
         <tr>
             <th>Id_Cliente</th>
             <th>img</th>
+            <th>precio</th>
             <th>imagen</th>
         </tr>
 
         <?php
             require 'conexion.php';
-            $consulta= mysqli_query($conexion, "SELECT id_artesania,img FROM artesania");
+            $consulta= mysqli_query($conexion, "SELECT id_artesania,img,precio FROM artesania");
             while ($row= mysqli_fetch_array ($consulta)){
         ?>
             <tr>
                 <td> <?php echo $row['id_artesania']; ?></td>
                 <td> <?php echo $row['img']; ?></td>
+                <td> <?php echo $row['precio']; ?></td>
                 <td>
                     <img width="100px" src="<?php echo $row['img']?>">
                 </td>
