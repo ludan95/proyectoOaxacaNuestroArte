@@ -37,31 +37,30 @@ while ($row = mysqli_fetch_array($consulta)) {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarScroll">
-                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll
-          m-xl-auto" style="--bs-scroll-height: 100px;">
+                <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll m-xl-auto" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
                         <a class="nav-link active" aria-current="page" href="catalogo.php">Catalogo</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Unirse</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/altaUsuario.php">Cliente</a></li>
-                            <li><a href="pages/altaArtesano.php">Artesano</a></li>
+                            <li><a href="altaUsuario.php">Cliente</a></li>
+                            <li><a href="altaArtesano.php">Artesano</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Login</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/loginUsuarioCliente.php">Cliente</a></li>
-                            <li><a href="pages/loginUsuarioArtesano.php">Artesano</a></li>
+                            <li><a href="loginUsuarioCliente.php">Cliente</a></li>
+                            <li><a href="loginUsuarioArtesano.php">Artesano</a></li>
                         </ul>
                     </li>
 
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Perfil</a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/vistaPerfilUsuario.php">Cliente</a></li>
-                            <li><a href="pages/vistaPerfilArtesano.php">Artesano</a></li>
+                            <li><a href="vistaPerfilUsuario.php">Cliente</a></li>
+                            <li><a href="vistaPerfilArtesano.php">Artesano</a></li>
                         </ul>
                     </li>
                 </ul>
@@ -74,7 +73,6 @@ while ($row = mysqli_fetch_array($consulta)) {
         </div>
     </nav>
     <!--! termina donde se agrega la barra de navegacion-->
-
     <!--! ventana dque muestra el producto a comprar-->
     <section id="Compra_producto" class="tituloCatalogo py-5 ">
         <?php
@@ -193,7 +191,7 @@ while ($row = mysqli_fetch_array($consulta)) {
     
 
 
-<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+    <script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
                 </script>
                 <!-- Core theme JS-->
                 <script src="js/scripts.js"></script>
