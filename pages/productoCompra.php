@@ -1,4 +1,5 @@
 <?php
+session_start();
 require '../php/conexion.php';
 $consulta = mysqli_query($conexion, "SELECT * FROM compratemporal");
 while ($row = mysqli_fetch_array($consulta)) {
@@ -134,20 +135,31 @@ while ($row = mysqli_fetch_array($consulta)) {
                     </div>
 
                     <div class="col">
+
                         <br>
                         <div class="card">
+
                             <div class="card-body">
                                 <h3 class="">$<?php echo $row['precio'] ?>.00 </h3>
                                 <br>
                                 <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 5rem" max="<?php require '../php/conexion.php';
                                                                                                                                                         echo $row['cantidad_vender']; ?>" min="1" pattern="^[0-9]+" />
                                 <br>
-                                <iframe src="../pages/paypal.php" frameborder="0" width="100%" height="100%"></iframe>
+                                <?php if (!empty($_SESSION['active']) && $_SESSION['tipoSession'] == "usuario") {
+                                ?>
+                                    <iframe src="../pages/paypal.php" frameborder="0" width="100%" height="100%"></iframe>
+                                <?php
+                                } else {
+                                ?>
+                                    <p style="color: black;">No haz iniciado Sesion como Cliente</p>
+                                    <p> <a href="../pages/loginUsuarioCliente.php"> Iniciar </a> </p>
+                                <?php
+                                }
+                                ?>
                                 </a>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div>
         <?php

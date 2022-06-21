@@ -67,6 +67,5 @@ if(!empty($_SESSION['active'])){
   }else{
     echo " <script> alert('incorrecto') </script>";
   }
-  mysqli_close($conexion);
 }
 ?>

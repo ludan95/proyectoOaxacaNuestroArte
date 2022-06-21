@@ -1,5 +1,5 @@
 <?php
-session_start();
+session_start(); 
 if (!empty($_SESSION['active']&& $_SESSION['tipoSession']=="usuario")) {
 } else {
   header("Location:../index.html");
@@ -75,7 +75,7 @@ if (!empty($_SESSION['active']&& $_SESSION['tipoSession']=="usuario")) {
         <div class="estilo_borde1 ">
           <div class="div_imagen ">
             <!--<img src="../img/imgPerfiles_Usuarios/2691f5da63.jpg" alt="" style="width:100%; height:100%;">-->
-            <img width="250px" src="<?php echo $_SESSION['imagen']; ?>">
+            <img class="card" width="250px" src="<?php echo $_SESSION['imagen']; ?>">
           </div>
 
           <div>
