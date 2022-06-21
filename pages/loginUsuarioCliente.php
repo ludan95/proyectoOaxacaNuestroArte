@@ -26,8 +26,7 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="usuario" ) {
 </head>
 
 <body class="inicioSecion">
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container-fluid">
             <a class="navbar-brand" href="../index.html">OaxacaNuestroArte</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
@@ -36,30 +35,15 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="usuario" ) {
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll m-xl-auto" style="--bs-scroll-height: 100px;">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="catalogo.php">Catalogo</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarScrollingDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Link
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarScrollingDropdown">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                                <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                        </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link ">Login</a>
+                    <a class="nav-link active" aria-current="page" href="altaUsuario.php">Alta Cliente</a>
                     </li>
                 </ul>
+
                 <form class="d-flex">
-                    <input class="form-control me-2" type="search" placeholder="¿Qué te gustaria buscar?" aria-label="Search">
+                    <input class="form-control me-3" type="search" placeholder="¿Te gustaria buscar?" aria-label="Search">
                     <button class="btn btn-outline-success" type="submit">Buscar</button>
                 </form>
             </div>
@@ -78,7 +62,7 @@ if (!empty($_SESSION['active'])&&$_SESSION['tipoSession']=="usuario" ) {
             <div class="contenedor">
                 <div class="input-contenedor">
                     <i class="fas fa-envelope icon"></i>
-                    <input name="correoElectronico" type="email" placeholder="Correo Electronico" required value="mludan95@gmail.com">
+                    <input name="correoElectronico" type="email" placeholder="Correo Electronico" required >
                     <div class="invalid-feedback">Dato incorrecto</div>
                 </div>
 

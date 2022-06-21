@@ -18,6 +18,7 @@ sr.reveal('.header-content-right',{
 
 });
 
-function cerrarSesionphp{
-    
+function enviarid_artesania(){
+    var id= $('id_artid').val();
+    alert('id');
 };

@@ -6,7 +6,7 @@
     $db='ecommerceartesanias';
 /*
     $host= 'sql102.epizy.com';
-    $user='epiz_31761970';
+    $user='epiz_31761970';co
     $pass= 'HP6h3YF8n5ASXR';
     $db='epiz_31761970_ecommerceartesanias';
 */

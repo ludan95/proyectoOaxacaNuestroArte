@@ -209,3 +209,12 @@ p{
 .caja:hover .texto{
     bottom: -70%;
 }
+
+paypal.Buttons({
+  style: {
+    layout: 'vertical',
+    color:  'blue',
+    shape:  'rect',
+    label:  'paypal'
+  }
+}).render('#paypal-button-container');
