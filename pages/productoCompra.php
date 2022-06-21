@@ -1,16 +1,9 @@
 <?php
-    require '../php/conexion.php';
-    $consulta = mysqli_query($conexion, "SELECT * FROM compratemporal");
-    while ($row = mysqli_fetch_array ($consulta)) {
-        $id_artesania_Buscar = $row['id_artesania'];
-    }
-    
-// <?php
-// require '../php/conexion.php';
-// $consulta = mysqli_query($conexion, "SELECT cantidad_vender FROM artesania WHERE id_artesania=1");
-// $row = mysqli_fetch_array($consulta);
-// echo $row['cantidad_vender'];
-// 
+require '../php/conexion.php';
+$consulta = mysqli_query($conexion, "SELECT * FROM compratemporal");
+while ($row = mysqli_fetch_array($consulta)) {
+    $id_artesania_Buscar = $row['id_artesania'];
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -46,9 +39,9 @@
             <div class="collapse navbar-collapse" id="navbarScroll">
                 <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll
           m-xl-auto" style="--bs-scroll-height: 100px;">
-           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="catalogo.php">Catalogo</a>
-          </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="catalogo.php">Catalogo</a>
+                    </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Unirse</a>
                         <ul class="dropdown-menu">
@@ -85,7 +78,6 @@
     <!--! ventana dque muestra el producto a comprar-->
     <section id="Compra_producto" class="tituloCatalogo py-5 ">
         <?php
-        require '../php/conexion.php';
         $consulta = mysqli_query($conexion, "SELECT * FROM artesania WHERE id_artesania='$id_artesania_Buscar'");
         while ($row = mysqli_fetch_array($consulta)) {
         ?>
@@ -126,7 +118,7 @@
                             </div>
                         <?php } ?>
                     </div>
-                    
+
                     <div class="col">
                         <br>
                         <H2 class=""><?php echo $row['nombre'] ?></H2>
@@ -146,36 +138,14 @@
                     <div class="col">
                         <br>
                         <div class="card">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h3 class="">$<?php echo $row['precio'] ?>.00 </h3>
-                                    <div id="apartado1"></div>
-                                    <br>
-                                    <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 5rem" max="<?php require '../php/conexion.php';
-                                                                                                                                                            $consulta = mysqli_query($conexion, "SELECT cantidad_vender FROM artesania WHERE id_artesania='$id_artesania_Buscar'");
-                                                                                                                                                            $row = mysqli_fetch_array($consulta);
-                                                                                                                                                            echo $row['cantidad_vender']; ?>" min="1" pattern="^[0-9]+" />
-                                    <br>
-                                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
-                                        Comprar
-                                    </button>
-
-                                    <!-- Modal -->
-                                    <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-                                        <div class="modal-dialog modal-dialog-centered modal-sm">
-                                            <div class="modal-content">
-                                                <div class="modal-header">
-                                                    <h5 class="modal-title" id="staticBackdropLabel" style="color: black;">Observar Artesania</h5>
-                                                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                                                </div>
-                                                <div id="paypal-buttom-conteiner"></div>
-                                                
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                    </a>
-                                </div>
+                            <div class="card-body">
+                                <h3 class="">$<?php echo $row['precio'] ?>.00 </h3>
+                                <br>
+                                <input class="form-control text-center me-3" id="inputQuantity" type="number" value="1" style="max-width: 5rem" max="<?php require '../php/conexion.php';
+                                                                                                                                                        echo $row['cantidad_vender']; ?>" min="1" pattern="^[0-9]+" />
+                                <br>
+                                <iframe src="../pages/paypal.php" frameborder="0" width="100%" height="100%"></iframe>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -221,14 +191,14 @@
                 </footer>
                 <!--? Fin footer-->
     
-<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"> </script>
+
+
+<script src=" https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js">
+                </script>
                 <!-- Core theme JS-->
-<script src="js/scripts.js"></script>
-<script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-<script>
-    paypal.Buttons().render('#paypal-buttom-container')
-</script>
-                
+                <script src="js/scripts.js"></script>
+                <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+
 
 </body>
 
